@@ -1,10 +1,16 @@
 package strings;
 
-public class StringMain2 {
-    public static void main(String[] args) {
-        String str1 = "Я изучаю Java и английский тоже надо";
-        String str2 = "Я изучаю Java и английский тоже надо";
+import java.util.Scanner;
 
-        System.out.println(str1 == str2);
+public class StringMain3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String cat = "кошка";
+        for (int i = 0; i < 10; i++) {
+            String catFromConsole = scanner.nextLine();
+            System.out.println(cat == catFromConsole);
+            catFromConsole.intern();
+            System.out.println(cat == catFromConsole);
+        }
     }
 }

@@ -2,15 +2,9 @@ package strings;
 
 import java.util.Scanner;
 
-public class StringMain3 {
+public class StringMain4 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String cat = "кошка";
-        for (int i = 0; i < 10; i++) {
-            String catFromConsole = scanner.nextLine();
-            System.out.println(cat == catFromConsole);
-            catFromConsole.intern();
-            System.out.println(cat == catFromConsole);
-        }
+        System.out.println(String.format("Привет %s, я тебя так долго ждал.", "Лёша"));
+        System.out.println(String.format("Привет %s, я тебя так долго ждал. Мне %d лет", "Лёша", 26));
     }
 }
