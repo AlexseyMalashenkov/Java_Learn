@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Создано Microsoft Visio, экспорт SVG Сортировка пузырьком.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		width="11.6929in" height="8.26772in" viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB"
+		class="st10">
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:url(#grad0-4);stroke:#3d64ac;stroke-width:0.75}
+		.st2 {fill:#3d64ac;font-family:Calibri;font-size:1.5em}
+		.st3 {fill:#3d64ac;font-family:Calibri;font-size:1.16666em}
+		.st4 {marker-end:url(#mrkr4-39);stroke:#4672c4;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st5 {fill:#4672c4;fill-opacity:1;stroke:#4672c4;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st6 {fill:none;stroke:none;stroke-width:0.25}
+		.st7 {fill:#4672c4;font-family:Calibri;font-size:1.00001em}
+		.st8 {fill:#4672c4;font-family:Calibri;font-size:1.5em}
+		.st9 {fill:#3d64ac;font-family:Calibri;font-size:1.00001em}
+		.st10 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad0-4" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(60 0.5 0.5)">
+			<stop offset="0" stop-color="#e8ebf4" stop-opacity="1"/>
+			<stop offset="0.24" stop-color="#f4f5f9" stop-opacity="1"/>
+			<stop offset="0.54" stop-color="#feffff" stop-opacity="1"/>
+		</linearGradient>
+	</defs>
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-39" class="st5" refX="-7.04" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) "/>
+		</marker>
+	</defs>
+	<g>
+		<title>Страница-1</title>
+		<g id="shape1-1" transform="translate(89.6457,-484.724)">
+			<title>Начало/окончание</title>
+			<desc>Начало</desc>
+			<path d="M14.17 595.28 L111.97 595.28 A14.1732 14.1732 -180 0 0 111.97 566.93 L14.17 566.93 A14.1732 14.1732 -180 1 0
+						 14.17 595.28 Z" class="st1"/>
+			<text x="35.28" y="586.5" class="st2">Начало</text>		</g>
+		<g id="shape2-6" transform="translate(89.6457,-420.945)">
+			<title>Пользовательская 4</title>
+			<desc>k=N-1;k&#62;0;k--</desc>
+			<path d="M17.01 595.28 L109.13 595.28 L126.14 574.02 L109.13 552.76 L17.01 552.76 L0 574.02 L17.01 595.28 Z"
+					class="st1"/>
+			<text x="24.76" y="578.22" class="st3">k=N-1;k&#62;0;k--</text>		</g>
+		<g id="shape3-10" transform="translate(89.6457,-357.165)">
+			<title>Пользовательская 4.3</title>
+			<desc>i=0;i&#60;k;i++</desc>
+			<path d="M17.01 595.28 L109.13 595.28 L126.14 574.02 L109.13 552.76 L17.01 552.76 L0 574.02 L17.01 595.28 Z"
+					class="st1"/>
+			<text x="33.83" y="578.22" class="st3">i=0;i&#60;k;i++</text>		</g>
+		<g id="shape4-14" transform="translate(89.6457,-293.386)">
+			<title>Решение</title>
+			<desc>a[i]&#62;a[i+1]</desc>
+			<path d="M0 574.02 L63.07 552.76 L126.14 574.02 L63.07 595.28 L0 574.02 Z" class="st1"/>
+			<text x="34.05" y="578.22" class="st3">a[i]&#62;a[i+1]</text>		</g>
+		<g id="shape5-18" transform="translate(232.087,-243.78)">
+			<title>Процесс</title>
+			<desc>temp=a[i]</desc>
+			<rect x="0" y="552.756" width="82.5591" height="42.5197" class="st1"/>
+			<text x="13.44" y="578.22" class="st3">temp=a[i]</text>		</g>
+		<g id="shape6-22" transform="translate(232.087,-172.913)">
+			<title>Процесс.6</title>
+			<desc>a[i]=a[i+1]</desc>
+			<rect x="0" y="552.756" width="82.5591" height="42.5197" class="st1"/>
+			<text x="12.25" y="578.22" class="st3">a[i]=a[i+1]</text>		</g>
+		<g id="shape7-26" transform="translate(232.087,-102.047)">
+			<title>Процесс.7</title>
+			<desc>a[i+1]=temp</desc>
+			<rect x="0" y="552.756" width="82.5591" height="42.5197" class="st1"/>
+			<text x="6.41" y="578.22" class="st3">a[i+1]=temp</text>		</g>
+		<g id="shape8-30" transform="translate(90,-31.1811)">
+			<title>Начало/окончание.8</title>
+			<desc>Конец</desc>
+			<path d="M14.17 595.28 L111.97 595.28 A14.1732 14.1732 -180 0 0 111.97 566.93 L14.17 566.93 A14.1732 14.1732 -180 1 0
+						 14.17 595.28 Z" class="st1"/>
+			<text x="39.27" y="586.5" class="st2">Конец</text>		</g>
+		<g id="shape9-34" transform="translate(145.63,-484.724)">
+			<title>Динамическая соединительная линия</title>
+			<path d="M7.09 595.28 L7.09 609.5" class="st4"/>
+		</g>
+		<g id="shape10-40" transform="translate(145.63,-420.945)">
+			<title>Динамическая соединительная линия.10</title>
+			<path d="M7.09 595.28 L7.09 609.5" class="st4"/>
+		</g>
+		<g id="shape11-45" transform="translate(145.63,-357.165)">
+			<title>Динамическая соединительная линия.11</title>
+			<path d="M7.09 595.28 L7.09 609.5" class="st4"/>
+		</g>
+		<g id="shape12-50" transform="translate(215.787,-314.646)">
+			<title>Динамическая соединительная линия.12</title>
+			<path d="M0 595.28 L57.58 595.28 L57.58 616.58" class="st4"/>
+		</g>
+		<g id="shape13-55" transform="translate(266.28,-243.78)">
+			<title>Динамическая соединительная линия.13</title>
+			<path d="M7.09 595.28 L7.09 616.58" class="st4"/>
+		</g>
+		<g id="shape14-60" transform="translate(266.28,-172.913)">
+			<title>Динамическая соединительная линия.14</title>
+			<path d="M7.09 595.28 L7.09 616.58" class="st4"/>
+		</g>
+		<g id="shape15-65" transform="translate(273.366,-102.047)">
+			<title>Динамическая соединительная линия.15</title>
+			<path d="M0 595.28 L0 616.54 L-204.98 616.54 L-204.98 318.9 L-190.76 318.9" class="st4"/>
+		</g>
+		<g id="shape16-70" transform="translate(159.697,-293.386)">
+			<title>Динамическая соединительная линия.16</title>
+			<path d="M-6.98 595.28 L-6.98 651.97 L-64.74 651.97 L-64.74 807.59 L-14.23 807.59" class="st4"/>
+		</g>
+		<g id="shape17-75" transform="translate(208.701,-378.425)">
+			<title>Динамическая соединительная линия.17</title>
+			<path d="M7.09 595.28 L28.35 595.28 L28.35 531.5 L14.13 531.5" class="st4"/>
+		</g>
+		<g id="shape18-80" transform="translate(89.6457,-442.205)">
+			<title>Динамическая соединительная линия.18</title>
+			<path d="M0 595.28 L-32.06 595.28 L-32.06 969 L63.43 969 L63.43 970.91" class="st4"/>
+		</g>
+		<g id="shape19-85" transform="translate(249.906,-399.024)">
+			<title>Лист.19</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+		<g id="shape20-88" transform="translate(243.102,-323.906)">
+			<title>Лист.20</title>
+			<desc>да</desc>
+			<rect x="0" y="583.276" width="20.5197" height="12" class="st6"/>
+			<text x="4.04" y="592.88" class="st7">да</text>		</g>
+		<g id="shape21-91" transform="translate(53.8583,-451.465)">
+			<title>Лист.21</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+		<g id="shape22-94" transform="translate(116.22,-203.433)">
+			<title>Лист.22</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+		<g id="shape23-97" transform="translate(28.3465,-524.079)">
+			<title>Лист.23</title>
+			<desc>Обычная сортировка пузырьком</desc>
+			<rect x="0" y="554.929" width="259.764" height="40.3465" class="st6"/>
+			<text x="5.03" y="580.5" class="st8">Обычная сортировка пузырьком</text>		</g>
+		<g id="shape24-100" transform="translate(568.701,-487.228)">
+			<title>Начало/окончание.24</title>
+			<desc>Начало</desc>
+			<path d="M14.17 595.28 L111.97 595.28 A14.1732 14.1732 -180 0 0 111.97 566.93 L14.17 566.93 A14.1732 14.1732 -180 1 0
+						 14.17 595.28 Z" class="st1"/>
+			<text x="35.28" y="586.5" class="st2">Начало</text>		</g>
+		<g id="shape32-104" transform="translate(624.685,-487.228)">
+			<title>Динамическая соединительная линия.32</title>
+			<path d="M7.09 595.28 L7.09 609.5" class="st4"/>
+		</g>
+		<g id="shape46-109" transform="translate(507.402,-526.583)">
+			<title>Лист.46</title>
+			<desc>Сортировка пузырьком с ключом</desc>
+			<rect x="0" y="554.929" width="259.764" height="40.3465" class="st6"/>
+			<text x="2.24" y="580.5" class="st8">Сортировка пузырьком с ключом</text>		</g>
+		<g id="shape47-112" transform="translate(568.701,-442.205)">
+			<title>Данные</title>
+			<desc>isSorted=false</desc>
+			<path d="M-5.94 595.28 L120.2 595.28 L132.08 571.51 L5.94 571.51 L-5.94 595.28 Z" class="st1"/>
+			<text x="23.07" y="587.59" class="st3">isSorted=false</text>		</g>
+		<g id="shape48-116" transform="translate(568.701,-401.433)">
+			<title>Решение.48</title>
+			<desc>!isSorted</desc>
+			<path d="M0 583.39 L63.07 571.51 L126.14 583.39 L63.07 595.28 L0 583.39 Z" class="st1"/>
+			<text x="37.59" y="587.59" class="st3">!isSorted</text>		</g>
+		<g id="shape49-120" transform="translate(568.701,-370.677)">
+			<title>Данные.49</title>
+			<desc>isSorted=true</desc>
+			<path d="M-3 595.28 L123.14 595.28 L129.14 583.28 L3 583.28 L-3 595.28 Z" class="st1"/>
+			<text x="24.44" y="593.48" class="st3">isSorted=true</text>		</g>
+		<g id="shape50-124" transform="translate(568.701,-330.567)">
+			<title>Пользовательская 4.50</title>
+			<desc>i=1;i&#60;N;i++</desc>
+			<path d="M17.01 595.28 L109.13 595.28 L126.14 583.39 L109.13 571.51 L17.01 571.51 L0 583.39 L17.01 595.28 Z"
+					class="st1"/>
+			<text x="32.49" y="587.59" class="st3">i=1;i&#60;N;i++</text>		</g>
+		<g id="shape51-128" transform="translate(568.701,-283.465)">
+			<title>Решение.51</title>
+			<desc>a[i]&#60;a[i+1]</desc>
+			<path d="M0 583.39 L63.07 571.51 L126.14 583.39 L63.07 595.28 L0 583.39 Z" class="st1"/>
+			<text x="34.05" y="587.59" class="st3">a[i]&#60;a[i+1]</text>		</g>
+		<g id="shape52-132" transform="translate(730.984,-257.299)">
+			<title>Процесс.52</title>
+			<desc>temp=a[i]</desc>
+			<rect x="0" y="565.839" width="82.5591" height="29.4367" class="st1"/>
+			<text x="13.44" y="584.76" class="st3">temp=a[i]</text>		</g>
+		<g id="shape53-136" transform="translate(730.984,-208.237)">
+			<title>Процесс.53</title>
+			<desc>a[i]=a[i+1]</desc>
+			<rect x="0" y="565.839" width="82.5591" height="29.4367" class="st1"/>
+			<text x="12.25" y="584.76" class="st3">a[i]=a[i+1]</text>		</g>
+		<g id="shape54-140" transform="translate(730.984,-159.176)">
+			<title>Процесс.54</title>
+			<desc>a[i+1]=temp</desc>
+			<rect x="0" y="565.839" width="82.5591" height="29.4367" class="st1"/>
+			<text x="6.41" y="584.76" class="st3">a[i+1]=temp</text>		</g>
+		<g id="shape55-144" transform="translate(765.177,-257.299)">
+			<title>Динамическая соединительная линия.55</title>
+			<path d="M7.09 595.28 L7.09 607.86" class="st4"/>
+		</g>
+		<g id="shape56-149" transform="translate(765.177,-208.237)">
+			<title>Динамическая соединительная линия.56</title>
+			<path d="M7.09 595.28 L7.09 607.86" class="st4"/>
+		</g>
+		<g id="shape57-154" transform="translate(730.984,-110.115)">
+			<title>Процесс.57</title>
+			<desc>isSorted=false</desc>
+			<rect x="0" y="565.839" width="82.5591" height="29.4367" class="st1"/>
+			<text x="6.99" y="584.16" class="st9">isSorted=false</text>		</g>
+		<g id="shape58-158" transform="translate(568.701,-31.1811)">
+			<title>Начало/окончание.58</title>
+			<desc>Конец</desc>
+			<path d="M14.17 595.28 L111.97 595.28 A14.1732 14.1732 -180 0 0 111.97 566.93 L14.17 566.93 A14.1732 14.1732 -180 1 0
+						 14.17 595.28 Z" class="st1"/>
+			<text x="39.27" y="586.5" class="st2">Конец</text>		</g>
+		<g id="shape59-162" transform="translate(624.685,-442.205)">
+			<title>Динамическая соединительная линия.59</title>
+			<path d="M7.09 595.28 L7.09 605.24" class="st4"/>
+		</g>
+		<g id="shape60-167" transform="translate(624.685,-401.433)">
+			<title>Динамическая соединительная линия.60</title>
+			<path d="M7.09 595.28 L7.09 606.99" class="st4"/>
+		</g>
+		<g id="shape61-172" transform="translate(694.843,-298.128)">
+			<title>Динамическая соединительная линия.61</title>
+			<path d="M0 598.06 L77.42 598.06 L77.42 599.63" class="st4"/>
+		</g>
+		<g id="shape62-177" transform="translate(765.177,-159.176)">
+			<title>Динамическая соединительная линия.62</title>
+			<path d="M7.09 595.28 L7.09 607.86" class="st4"/>
+		</g>
+		<g id="shape65-182" transform="translate(624.685,-370.677)">
+			<title>Динамическая соединительная линия.65</title>
+			<path d="M7.09 595.28 L7.09 604.58" class="st4"/>
+		</g>
+		<g id="shape66-187" transform="translate(624.685,-330.567)">
+			<title>Динамическая соединительная линия.66</title>
+			<path d="M7.09 595.28 L7.09 611.57" class="st4"/>
+		</g>
+		<g id="shape69-192" transform="translate(687.756,-342.449)">
+			<title>Динамическая соединительная линия.69</title>
+			<path d="M7.09 595.28 L28.35 595.28 L28.35 524.41 L14.13 524.41" class="st4"/>
+		</g>
+		<g id="shape72-197" transform="translate(772.264,-110.115)">
+			<title>Динамическая соединительная линия.72</title>
+			<path d="M0 595.28 L0 616.54 L-224.82 616.54 L-224.82 362.94 L-210.6 362.94" class="st4"/>
+		</g>
+		<g id="shape73-202" transform="translate(624.862,-283.465)">
+			<title>Динамическая соединительная линия.73</title>
+			<path d="M6.91 595.28 L6.91 605.91 L7.26 605.91 L7.26 782.84" class="st4"/>
+		</g>
+		<g id="shape74-207" transform="translate(568.701,-413.315)">
+			<title>Динамическая соединительная линия.74</title>
+			<path d="M0 595.28 L-44.29 595.28 L-44.29 936.8 L63.07 936.8 L63.07 942.02" class="st4"/>
+		</g>
+		<g id="shape75-212" transform="translate(716.488,-305.811)">
+			<title>Лист.75</title>
+			<desc>да</desc>
+			<rect x="0" y="583.276" width="20.5197" height="12" class="st6"/>
+			<text x="4.04" y="592.88" class="st7">да</text>		</g>
+		<g id="shape76-215" transform="translate(595.276,-186.425)">
+			<title>Лист.76</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+		<g id="shape77-218" transform="translate(536.205,-420.945)">
+			<title>Лист.77</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+		<g id="shape78-221" transform="translate(734.63,-370.677)">
+			<title>Лист.78</title>
+			<desc>нет</desc>
+			<rect x="0" y="583.276" width="30.7244" height="12" class="st6"/>
+			<text x="6.85" y="592.88" class="st7">нет</text>		</g>
+	</g>
+</svg>
