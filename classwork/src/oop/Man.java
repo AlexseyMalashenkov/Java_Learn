@@ -3,6 +3,8 @@ package oop;
 public class Man {
     private String name;
     private int hairLength;
+    private int yearOld;
+    private ETypeMan type;
 
     private int variable1;
     protected int variable2;
@@ -17,6 +19,22 @@ public class Man {
     public Man(String name, int hairLength) {
         this.name = name;
         this.hairLength = hairLength;
+    }
+
+    public int getYearOld() {
+        return yearOld;
+    }
+
+    public void setYearOld(int yearOld) {
+        this.yearOld = yearOld;
+    }
+
+    public ETypeMan getType() {
+        return type;
+    }
+
+    public void setType(ETypeMan type) {
+        this.type = type;
     }
 
     public String getName() {
