@@ -5,7 +5,6 @@ public class EnumMain1 {
         Day day = Day.MONDAY;
         //Day day2 = Day.valueOf("efesfs");
         System.out.println(day.ordinal());
-
         switch (day) {
             case MONDAY:
                 System.out.println("Mondays are bad.");
