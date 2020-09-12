@@ -34,5 +34,6 @@ public class CalculatorMain {
         System.out.println();
         System.out.println(calculatorWithCounter.divNum(resultWithCounter, 0));    // В обоих случаях у меня деление на 0 даёт бесконечность т.к. метод принимает double.
         System.out.println(calculatorWithCounter.divNum(resultWithCounter, 0.0d));//Если был бы int - выдало бы исключение.
+        
     }
 }
