@@ -35,5 +35,27 @@ public class CalculatorMain {
         System.out.println(calculator.divNum(resultWithConterDecorator, 0));    // В обоих случаях у меня деление на 0 даёт бесконечность т.к. метод принимает double.
         System.out.println(calculator.divNum(resultWithConterDecorator, 0.0d));//Если был бы int - выдало бы исключение.
 
+        CalcWithMemoryDecorator cWiMeDe = new CalcWithMemoryDecorator(calcWithMathExtends);
+
+        double result = cWiMeDe.loadFromMemory();
+        System.out.printf("Загрузка памяти - " + "%.2f", result);
+        System.out.println();
+        cWiMeDe.saveToMemory(cWiMeDe.divNum(28, 5));
+        result = cWiMeDe.loadFromMemory();
+        System.out.printf("Загрузка памяти - " + "%.2f", result);
+        System.out.println();
+        cWiMeDe.saveToMemory(cWiMeDe.expNum(result, 2));
+        result = cWiMeDe.loadFromMemory();
+        System.out.printf("Загрузка памяти - " + "%.2f", result);
+        System.out.println();
+        cWiMeDe.saveToMemory(cWiMeDe.addNum(cWiMeDe.multiNum(15, 7), result));
+        result = cWiMeDe.loadFromMemory();
+        System.out.printf("Загрузка памяти - " + "%.2f", result);
+        System.out.println();
+        cWiMeDe.saveToMemory(cWiMeDe.addNum(4.1, result));
+        result = cWiMeDe.loadFromMemory();
+        System.out.printf("Загрузка памяти - " + "%.2f", result);
+        System.out.println();
+
     }
 }
