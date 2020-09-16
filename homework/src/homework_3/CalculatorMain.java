@@ -27,20 +27,13 @@ public class CalculatorMain {
         System.out.println(calcWithMathExtends.divNum(resultWithMathExtends, 0));    // В обоих случаях у меня деление на 0 даёт бесконечность т.к. метод принимает double.
         System.out.println(calcWithMathExtends.divNum(resultWithMathExtends, 0.0d));//Если был бы int - выдало бы исключение.
 
-        CalculatorWithCounter calcWithCounter = new CalculatorWithCounter(calcWithOperator);
+        CalculatorWithConterDecorator calculator = new CalculatorWithConterDecorator(calcWithMathExtends);
 
-        double resultWithCounter = calcWithCounter.addNum(calcWithCounter.addNum(4.1, calcWithCounter.multiNum(15, 7)), calcWithCounter.expNum(calcWithCounter.divNum(28, 5), 2));
-        System.out.printf("Задание №9) 4.1 + 15 * 7 + (28 / 5)^ 2 = " + "%.2f", resultWithCounter);
+        double resultWithConterDecorator = calculator.addNum(calculator.addNum(4.1, calculator.multiNum(15, 7)), calculator.expNum(calculator.divNum(28, 5), 2));
+        System.out.printf("Задание №9) 4.1 + 15 * 7 + (28 / 5)^ 2 = " + "%.2f", resultWithConterDecorator);
         System.out.println();
-        System.out.println(calcWithCounter.divNum(resultWithCounter, 0));    // В обоих случаях у меня деление на 0 даёт бесконечность т.к. метод принимает double.
-        System.out.println(calcWithCounter.divNum(resultWithCounter, 0.0d));//Если был бы int - выдало бы исключение.
-        System.out.println(calcWithCounter.getCountOperation());
+        System.out.println(calculator.divNum(resultWithConterDecorator, 0));    // В обоих случаях у меня деление на 0 даёт бесконечность т.к. метод принимает double.
+        System.out.println(calculator.divNum(resultWithConterDecorator, 0.0d));//Если был бы int - выдало бы исключение.
 
-        CalculatorWithMemory calculatorWithMemory = new CalculatorWithMemory();
-        System.out.println(calculatorWithMemory.getCalculatorMemory());
-        calculatorWithMemory.setCalculatorMemory(10);
-        System.out.println(calculatorWithMemory.getCalculatorMemory());
-        calculatorWithMemory.setCalculatorMemory(20);
-        System.out.println(calculatorWithMemory.getCalculatorMemory());
     }
 }

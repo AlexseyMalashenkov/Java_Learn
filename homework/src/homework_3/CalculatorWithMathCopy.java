@@ -1,6 +1,6 @@
 package homework_3;
 
-public class CalculatorWithMathCopy {
+public class CalculatorWithMathCopy implements ICalculatorCommand{
 
     public double addNum(double firstNum, double secondNum) {
         return firstNum + secondNum;

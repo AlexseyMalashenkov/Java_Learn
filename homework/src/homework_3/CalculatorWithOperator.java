@@ -1,6 +1,6 @@
 package homework_3;
 
-public class CalculatorWithOperator {
+public class CalculatorWithOperator implements ICalculatorCommand{
 
     public double addNum(double firstNum, double secondNum) {
         return firstNum + secondNum;
