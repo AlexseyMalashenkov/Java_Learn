@@ -12,6 +12,7 @@ public class CalcMain1 {
         Fizik fizik1 = new Fizik(calc1);
         double calcResult = fizik1.calc(123, 77);
 
+
         System.out.println(calcResult);
 
         //CalcWithCounter3 calc5 = new CalcWithCounter3(null); //BAD
@@ -34,7 +35,7 @@ public class CalcMain1 {
         System.out.println(savedCalc.getCounter());
 
 
-        Fizik fizik4 = new Fizik(new CalcWithCounter3(calc1));
+        Fizik<ICalcWithCounter> fizik4 = new Fizik(new CalcWithCounter3(calc1));
         double calcResult4 = fizik4.calc(123,77);
        // ICalcWithCounter savedCalc4 = (ICalcWithCounter) fizik4.getCalc(); //ошибка приведения типов
 
@@ -43,8 +44,7 @@ public class CalcMain1 {
         //System.out.println(((ICalcWithCounter) fizik4.getCalc()).getCounter()); // -//-
         ICalc savedCalc4 = fizik4.getCalc();
 
-        if (savedCalc4 instanceof ICalcWithCounter) {
-            System.out.println(((ICalcWithCounter) fizik4.getCalc()).getCounter());
-        }
+        System.out.println((fizik4.getCalc()).getCounter());
+
     }
 }

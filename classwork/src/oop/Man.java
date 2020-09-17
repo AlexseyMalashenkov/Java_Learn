@@ -1,10 +1,11 @@
 package oop;
 
-public class Man {
+public class Man implements Comparable<Man>{
     private String name;
     private int hairLength;
     private int yearOld;
     private ETypeMan type;
+
 
     private int variable1;
     protected int variable2;
@@ -56,4 +57,11 @@ public class Man {
     public String toString() {
         return "Имя: " + this.name + ", Длинна волос: " + this.hairLength;
     }
+
+    @Override
+    public int compareTo(Man o) {
+        return this.hairLength - o.hairLength;
+    }
+
+
 }
