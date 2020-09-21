@@ -41,6 +41,18 @@ public class DataContainer<T> {
         }
     }
 
+    public boolean delete(T item) {
+        for (int i = 0; i < data.length; i++) {
+            if (data[i].equals(item)) {
+                delete(i);
+                return true;
+            } else {
+                continue;
+            }
+        }
+        return false;
+    }
+
     public T get(int index) {
         return data[index];
     }

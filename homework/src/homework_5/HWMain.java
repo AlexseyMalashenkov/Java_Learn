@@ -36,5 +36,13 @@ public class HWMain {
         for (Integer integer : mass2) {
             System.out.println(integer);
         }
+
+        System.out.println("----------");
+        dataContainer.delete((Integer) 56);
+
+        Integer[] mass3 = dataContainer.getItems();
+        for (Integer integer : mass3) {
+            System.out.println(integer);
+        }
     }
 }
