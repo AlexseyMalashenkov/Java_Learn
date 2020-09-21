@@ -26,6 +26,21 @@ public class DataContainer<T> {
         }
     }
 
+    public boolean delete(int index) {
+        if (index < data.length) {
+            for (int i = index; i < data.length - 1; i++)
+            {
+                data[i] = data[i + 1];
+            }
+            T[] tmp = Arrays.copyOf(data, data.length - 1);
+            data = tmp;
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public T get(int index) {
         return data[index];
     }
