@@ -3,7 +3,7 @@ package homework_5;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class DataContainer<T> {
+public class DataContainer <T> {
     private T[] data;
 
     public DataContainer(Class tClass, int length) {
@@ -34,6 +34,7 @@ public class DataContainer<T> {
             }
             T[] tmp = Arrays.copyOf(data, data.length - 1);
             data = tmp;
+            deleteNullElements();
 
             return true;
         } else {
@@ -53,11 +54,40 @@ public class DataContainer<T> {
         return false;
     }
 
+    private void deleteNullElements() {
+        int countNulls = 0;
+
+        for (int i = 0; i < data.length; i++) { // count nulls in array
+            if (data[i] == null) {
+                countNulls++;
+            }
+        }
+        T[] tmp = Arrays.copyOf(data, data.length - countNulls);
+
+        for (int i = 0, j = 0; i < data.length; i++) {
+            if (data[i] != null) {
+                tmp[j] = data[i];
+                j++;
+            }
+        }
+        data = tmp;
+    }
+
     public T get(int index) {
-        return data[index];
+        if (index < data.length) {
+            return data[index];
+        } else {
+            return null;
+        }
     }
 
     public T[] getItems() {
         return data;
+    }
+
+    @Override
+    public String toString() {
+        deleteNullElements();
+        return "DataContainer {" + "data = " + Arrays.toString(data) + "}";
     }
 }

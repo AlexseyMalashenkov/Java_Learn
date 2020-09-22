@@ -2,7 +2,7 @@ package homework_5;
 
 public class HWMain {
     public static void main(String[] args) {
-        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 1);
+        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 100);
 
         System.out.println(dataContainer.add(50));
         System.out.println(dataContainer.add(51));
@@ -17,6 +17,8 @@ public class HWMain {
         System.out.println(dataContainer.add(60));
         System.out.println(dataContainer.add(61));
 
+        System.out.println(dataContainer.get(324));
+
         System.out.println("----------");
 
         Integer[] mass1 = dataContainer.getItems();
@@ -30,7 +32,7 @@ public class HWMain {
 
         System.out.println("----------");
 
-        dataContainer.delete(2);
+            dataContainer.delete(2); //тут всё ок
 
         Integer[] mass2 = dataContainer.getItems();
         for (Integer integer : mass2) {
@@ -38,11 +40,15 @@ public class HWMain {
         }
 
         System.out.println("----------");
-        dataContainer.delete((Integer) 56);
+        dataContainer.delete((Integer) 56); //а вот тут приходится явно преобразовывать тип
 
         Integer[] mass3 = dataContainer.getItems();
         for (Integer integer : mass3) {
             System.out.println(integer);
         }
+
+        System.out.println("----------");
+
+        System.out.println(dataContainer.toString());
     }
 }
