@@ -40,7 +40,7 @@ public class HWMain {
         }
 
         System.out.println("----------");
-        dataContainer.delete((Integer) 56); //а вот тут приходится явно преобразовывать тип
+        dataContainer.delete(Integer.valueOf(56)); //а вот тут приходится явно преобразовывать тип
 
         Integer[] mass3 = dataContainer.getItems();
         for (Integer integer : mass3) {
