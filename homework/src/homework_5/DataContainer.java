@@ -34,7 +34,6 @@ public class DataContainer <T> {
             }
             T[] tmp = Arrays.copyOf(data, data.length - 1);
             data = tmp;
-            deleteNullElements();
 
             return true;
         } else {
@@ -57,11 +56,12 @@ public class DataContainer <T> {
     private void deleteNullElements() {
         int countNulls = 0;
 
-        for (int i = 0; i < data.length; i++) { // count nulls in array
+        for (int i = 0; i < data.length; i++) {
             if (data[i] == null) {
                 countNulls++;
             }
         }
+
         T[] tmp = Arrays.copyOf(data, data.length - countNulls);
 
         for (int i = 0, j = 0; i < data.length; i++) {
@@ -71,6 +71,10 @@ public class DataContainer <T> {
             }
         }
         data = tmp;
+    }
+
+    public void sort(T tmp) {
+
     }
 
     public T get(int index) {
