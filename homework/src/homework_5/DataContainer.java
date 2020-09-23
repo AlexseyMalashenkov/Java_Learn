@@ -2,6 +2,7 @@ package homework_5;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class DataContainer <T> {
     private T[] data;
@@ -73,8 +74,21 @@ public class DataContainer <T> {
         data = tmp;
     }
 
-    public void sort(T tmp) {
+    public void sort(Comparator<T> comparator) {
+        boolean isSorted = false;
+        T tmp;
 
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < this.data.length; i++) {
+                if (comparator.compare(this.data[i], this.data[i - 1]) < 0) {
+                    tmp = this.data[i];
+                    this.data[i] = this.data[i - 1];
+                    this.data[i - 1] = tmp;
+                    isSorted = false;
+                }
+            }
+        }
     }
 
     public T get(int index) {
