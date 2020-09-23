@@ -13,28 +13,28 @@ public class DataContainer <T> {
 
     public int add(T item) {
         for (int i = 0;; i++) {
-            if (i < data.length) {
-                if (data[i] == null) {
-                    data[i] = item;
+            if (i < this.data.length) {
+                if (this.data[i] == null) {
+                    this.data[i] = item;
                     return i;
                 }
             } else {
-                T[] tmp = Arrays.copyOf(data, data.length + 1);
-                data = tmp;
-                data[i] = item;
+                T[] tmp = Arrays.copyOf(this.data, this.data.length + 1);
+                this.data = tmp;
+                this.data[i] = item;
                 return i;
             }
         }
     }
 
     public boolean delete(int index) {
-        if (index < data.length) {
-            for (int i = index; i < data.length - 1; i++)
+        if (index < this.data.length) {
+            for (int i = index; i < this.data.length - 1; i++)
             {
-                data[i] = data[i + 1];
+                this.data[i] = this.data[i + 1];
             }
-            T[] tmp = Arrays.copyOf(data, data.length - 1);
-            data = tmp;
+            T[] tmp = Arrays.copyOf(this.data, this.data.length - 1);
+            this.data = tmp;
 
             return true;
         } else {
@@ -43,8 +43,8 @@ public class DataContainer <T> {
     }
 
     public boolean delete(T item) {
-        for (int i = 0; i < data.length; i++) {
-            if (data[i].equals(item)) {
+        for (int i = 0; i < this.data.length; i++) {
+            if (this.data[i].equals(item)) {
                 delete(i);
                 return true;
             } else {
@@ -57,17 +57,17 @@ public class DataContainer <T> {
     private void deleteNullElements() {
         int countNulls = 0;
 
-        for (int i = 0; i < data.length; i++) {
-            if (data[i] == null) {
+        for (int i = 0; i < this.data.length; i++) {
+            if (this.data[i] == null) {
                 countNulls++;
             }
         }
 
-        T[] tmp = Arrays.copyOf(data, data.length - countNulls);
+        T[] tmp = Arrays.copyOf(this.data, this.data.length - countNulls);
 
-        for (int i = 0, j = 0; i < data.length; i++) {
-            if (data[i] != null) {
-                tmp[j] = data[i];
+        for (int i = 0, j = 0; i < this.data.length; i++) {
+            if (this.data[i] != null) {
+                tmp[j] = this.data[i];
                 j++;
             }
         }
@@ -126,20 +126,20 @@ public class DataContainer <T> {
     }
 
     public T get(int index) {
-        if (index < data.length) {
-            return data[index];
+        if (index < this.data.length) {
+            return this.data[index];
         } else {
             return null;
         }
     }
 
     public T[] getItems() {
-        return data;
+        return this.data;
     }
 
     @Override
     public String toString() {
         deleteNullElements();
-        return "DataContainer {" + "data = " + Arrays.toString(data) + "}";
+        return "DataContainer {" + "data = " + Arrays.toString(this.data) + "}";
     }
 }
