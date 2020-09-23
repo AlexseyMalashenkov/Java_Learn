@@ -1,8 +1,10 @@
 package homework_5;
 
+import homework_3.ICalculatorCommand;
+
 public class HWMain {
     public static void main(String[] args) {
-        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 100);
+        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 0);
         ComparatorInteger comparatorInteger = new ComparatorInteger();
 
         System.out.println(dataContainer.add(58));
@@ -56,11 +58,16 @@ public class HWMain {
         System.out.println("----------");
 
         dataContainer.sort(comparatorInteger);
-        
+
         Integer[] mass4 = dataContainer.getItems();
         for (Integer integer : mass4) {
             System.out.println(integer);
         }
+
+        System.out.println("----------");
+
+        DataContainer.sort(dataContainer);
+        DataContainer.sort(dataContainer, comparatorInteger);
 
     }
 }

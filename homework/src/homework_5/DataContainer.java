@@ -91,6 +91,40 @@ public class DataContainer <T> {
         }
     }
 
+    public static <V extends Comparable> void sort(DataContainer<V> container) {
+        boolean isSorted = false;
+        V tmp;
+
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < container.data.length; i++) {
+                if ((container.data[i].compareTo(container.data[i - 1])) < 0) {
+                    tmp = container.data[i];
+                    container.data[i] = container.data[i - 1];
+                    container.data[i - 1] = tmp;
+                    isSorted = false;
+                }
+            }
+        }
+    }
+
+    public static <V> void sort(DataContainer<V> container, Comparator<V> comparator) {
+        boolean isSorted = false;
+        V tmp;
+
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < container.data.length; i++) {
+                if (comparator.compare(container.data[i],container.data[i - 1]) < 0) {
+                    tmp = container.data[i];
+                    container.data[i] = container.data[i - 1];
+                    container.data[i - 1] = tmp;
+                    isSorted = false;
+                }
+            }
+        }
+    }
+
     public T get(int index) {
         if (index < data.length) {
             return data[index];
