@@ -9,6 +9,6 @@ public class StringsMain {
         int num = scanner.nextInt();
 
         NumsToString numsInt = new NumsToString(num);
-        numsInt.numToStr();
+        numsInt.intToStr();
     }
 }
