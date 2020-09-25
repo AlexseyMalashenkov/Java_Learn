@@ -70,13 +70,18 @@ public class NumToString {
     }
 
     private String specialValueHandlingThousands(int num) {
-        if (num % 10 == 1 && num != 11 && num != 1 && num != 111) {
+        boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
+        boolean isTwo = num % 10 == 2 && num != 12 && num != 2 && num != 112;
+        boolean isThree = num % 10 == 3 && num != 13 && num !=3 && num != 113;
+        boolean isFour = num % 10 == 4 && num != 14 && num !=4 && num != 114;
+
+        if (isOne) {
             return numToStr(num - (num % 10)) + " одна " + this.THOUSANDS[0];
         }
-        if (num % 10 == 2 && num != 12 && num != 2 && num != 112) {
+        if (isTwo) {
             return numToStr(num - (num % 10)) + " две " + this.THOUSANDS[1];
         }
-        if ((num % 10 == 3 && num != 13 && num !=3 && num != 113) || (num % 10 == 4 && num != 14 && num !=4 && num != 114)) {
+        if (isThree || isFour) {
             return numToStr(num - (num % 10)) + " " + this.BELLOW_TWENTY[num % 10] + " " + this.THOUSANDS[1];
         }
         else {
@@ -85,10 +90,15 @@ public class NumToString {
     }
 
     private String specialValueHandlingMillions(int num) {
-        if (num % 10 == 1 && num != 11 && num != 1 && num != 111) {
+        boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
+        boolean isTwo = num % 10 == 2 && num != 12 && num != 2 && num != 112;
+        boolean isThree = num % 10 == 3 && num != 13 && num !=3 && num != 113;
+        boolean isFour = num % 10 == 4 && num != 14 && num !=4 && num != 114;
+
+        if (isOne) {
             return numToStr(num - (num % 10)) + " " + this.BELLOW_TWENTY[num % 10] + " " + this.MILLIONS[0];
         }
-        if ((num % 10 == 2 && num != 12 && num != 2 && num != 112) || (num % 10 == 3 && num != 13 && num !=3  && num != 113) || (num % 10 == 4 && num != 14 && num !=4 && num != 114)) {
+        if (isTwo || isThree || isFour) {
             return numToStr(num - (num % 10)) + " " + this.BELLOW_TWENTY[num % 10] + " " + this.MILLIONS[1];
         }
         else {

@@ -1,2 +1,6 @@
-package collections.dto;public enum Gender {
+package collections.dto;
+
+public enum Gender {
+    МУЖЧИНА,
+    ЖЕНЩИНА
 }

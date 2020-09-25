@@ -1,2 +1,13 @@
-package collections.service;public interface IBankStorage {
+package collections.service;
+
+import collections.dto.Client;
+import collections.dto.Passport;
+
+import java.util.List;
+
+public interface IBankStorage {
+    void saveNewClient(Passport passport);
+    Client getClient(String id);
+    List<Passport> getPassportByClientId(String id);
+    List<Passport> getPassports();
 }

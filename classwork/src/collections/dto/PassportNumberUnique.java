@@ -1,11 +1,13 @@
 package collections.dto;
 
-public class PassportIdUnique {
+import java.util.Objects;
+
+public class PassportNumberUnique {
     private String name;
     private String id;
     private String number;
 
-    public PassportIdUnique() {
+    public PassportNumberUnique() {
     }
 
     public String getName() {
@@ -32,10 +34,23 @@ public class PassportIdUnique {
         this.number = number;
     }
 
-    public PassportIdUnique(String name, String id, String number) {
+    public PassportNumberUnique(String name, String id, String number) {
         this.name = name;
         this.id = id;
         this.number = number;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PassportNumberUnique that = (PassportNumberUnique) o;
+        return Objects.equals(number, that.number);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(number);
     }
 
     @Override
