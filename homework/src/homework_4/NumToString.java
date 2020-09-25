@@ -1,7 +1,10 @@
 package homework_4;
 
+import java.util.Locale;
+
 public class NumToString {
-    private final int num;
+    private int numInt;
+    private double numDouble;
 
     private final String[] BELLOW_TWENTY = { "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать" };
     private final String[] TENS = { "", "", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто" };
@@ -9,15 +12,32 @@ public class NumToString {
     private final String[] THOUSANDS = { "тысяча", "тысячи", "тысяч" };
     private final String[] MILLIONS = { "миллион", "миллиона", "миллионов" };
 
-    NumToString(int num) {
-        this.num = num;
+    NumToString(int numInt) {
+        this.numInt = numInt;
+    }
+    NumToString(double numDouble) {
+        this.numDouble = numDouble;
     }
 
     public String intToStr() {
         String result;
 
-        if (this.num >= -999_999_999 && this.num <= 999_999_999) {
-            result = this.num < 0 ? "минус " + numToStr(this.num) : "" + numToStr(this.num);
+        if (this.numInt >= -999_999_999 && this.numInt <= 999_999_999) {
+            result = this.numInt < 0 ? "минус " + numToStr(this.numInt) : "" + numToStr(this.numInt);
+        } else {
+            result = "введите другое число";
+        }
+
+        return result;
+    }
+
+    public String doubleToStr() {
+        String result;
+        int numAfterComma = 2;
+
+        if (this.numInt >= -999_999_999.999 && this.numInt <= 999_999_999.999) {
+            result = this.numInt < 0 ? "минус " + numToStr((int)this.numDouble) + " целых " + numToStr(desCast(this.numDouble, numAfterComma)) + " сотых" : ""
+                                                + numToStr((int)this.numDouble) + " целых " + numToStr(desCast(this.numDouble, numAfterComma)) + " сотых" ;
         } else {
             result = "введите другое число";
         }
@@ -104,5 +124,12 @@ public class NumToString {
         else {
             return numToStr(num) + " " + this.MILLIONS[2];
         }
+    }
+
+    public static int desCast(double d, int n) {
+        double doubleNumber = d - (int)d;
+        String stringForFormatInput = "%." + n + "f";
+
+        return Integer.parseInt(String.format(Locale.ENGLISH, stringForFormatInput, doubleNumber).substring(2));
     }
 }

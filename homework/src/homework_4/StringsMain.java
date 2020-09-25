@@ -5,17 +5,25 @@ import java.util.Scanner;
 public class StringsMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Введите число от -999_999_999 до 999_999_999");
-        int num = scanner.nextInt();
+        if (scanner.hasNextInt()) {
+            int numInt = scanner.nextInt();
 
-        NumToString numInt = new NumToString(num);
-        System.out.println(numInt.intToStr());
+            NumToString intToString = new NumToString(numInt);
+            System.out.println(intToString.intToStr());
+        } else {
+            System.out.println("Вы ввели не целочисленное число! Пример: 123456789");
+        }
 
-        //int[] array = new int[1000];
-        //for (int i = 0; i < array.length; i++) {
-        //    array[i] = (int) Math.round((Math.random() * 2_000_000_000) - 1_000_000_000);
-        //    NumToString numInt = new NumToString(array[i]);
-        //    System.out.println(array[i] + " \t" + numInt.intToStr());
-        //}
+        System.out.println("Введите число от -999_999_999,999 до 999_999_999,999");
+        if (scanner.hasNextDouble()) {
+            double numDouble = scanner.nextDouble();
+
+            NumToString doubleToString = new NumToString(numDouble);
+            System.out.println(doubleToString.doubleToStr());
+        } else {
+            System.out.println("Вы ввели не целочисленное число! Пример: 123456789,348");
+        }
     }
 }
