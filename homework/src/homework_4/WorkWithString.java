@@ -2,28 +2,18 @@ package homework_4;
 
 import java.util.Locale;
 
-public class NumToString {
-    private int numInt;
-    private double numDouble;
-
+public class WorkWithString {
     private final String[] BELLOW_TWENTY = { "ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать" };
     private final String[] TENS = { "", "", "двадцать", "тридцать", "сорок", "пятьдесят", "шестьдесят", "семьдесят", "восемьдесят", "девяносто" };
     private final String[] HUNDREDS = { "", "сто", "двести" , "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот" };
     private final String[] THOUSANDS = { "тысяча", "тысячи", "тысяч" };
     private final String[] MILLIONS = { "миллион", "миллиона", "миллионов" };
 
-    NumToString(int numInt) {
-        this.numInt = numInt;
-    }
-    NumToString(double numDouble) {
-        this.numDouble = numDouble;
-    }
-
-    public String intToStr() {
+    public String intToStr(int numInt) {
         String result;
 
-        if (this.numInt >= -999_999_999 && this.numInt <= 999_999_999) {
-            result = this.numInt < 0 ? "минус " + numToStr(this.numInt) : "" + numToStr(this.numInt);
+        if (numInt >= -999_999_999 && numInt <= 999_999_999) {
+            result = numInt < 0 ? "минус " + numToStr(numInt) : "" + numToStr(numInt);
         } else {
             result = "введите другое число";
         }
@@ -31,13 +21,25 @@ public class NumToString {
         return result;
     }
 
-    public String doubleToStr() {
+    public String doubleToStr(double numDouble) {
         String result;
         int numAfterComma = 2;
 
-        if (this.numInt >= -999_999_999.999 && this.numInt <= 999_999_999.999) {
-            result = this.numInt < 0 ? "минус " + numToStr((int)this.numDouble) + " целых " + numToStr(desCast(this.numDouble, numAfterComma)) + " сотых" : ""
-                                                + numToStr((int)this.numDouble) + " целых " + numToStr(desCast(this.numDouble, numAfterComma)) + " сотых" ;
+        if (numDouble >= -999_999_999.999 && numDouble <= 999_999_999.999) {
+            result = numDouble < 0 ? "минус " + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" : ""
+                                              + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" ;
+        } else {
+            result = "введите другое число";
+        }
+
+        return result;
+    }
+
+    public String toWeek(int day) {
+        String result;
+
+        if (day >= 0 && day <= 999_999_999) {
+            result = rightWeek(day);
         } else {
             result = "введите другое число";
         }
@@ -126,10 +128,21 @@ public class NumToString {
         }
     }
 
-    public static int desCast(double d, int n) {
+    private int desCast(double d, int n) {
         double doubleNumber = d - (int)d;
         String stringForFormatInput = "%." + n + "f";
 
         return Integer.parseInt(String.format(Locale.ENGLISH, stringForFormatInput, doubleNumber).substring(2));
+    }
+
+    private String rightWeek(int day) {
+        if (day % 10 == 2 && day % 10 == 3 && day % 10 == 4) {
+            return day / 7 + " недели";
+        }
+        if (day % 10 == 1) {
+            return day / 7 + " неделя";
+        } else {
+            return day / 7 + " недель";
+        }
     }
 }
