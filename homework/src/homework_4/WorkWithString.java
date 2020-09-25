@@ -29,13 +29,7 @@ public class WorkWithString {
         int numAfterComma = 2;
 
         if (numDouble >= -999_999_999.999 && numDouble <= 999_999_999.999) {
-            String tmp;
-            if ((int)numDouble % 10 == 1) {
-                tmp = " целая ";
-            }
-            else {
-                tmp = " целых ";
-            }
+            String tmp = specialValueIntegerPartDouble((int)numDouble);
 
             result = numDouble < 0 ? "минус " + numToStr((int)numDouble, !this.isDouble) + tmp + numToStr(desCast(numDouble, numAfterComma), !this.isDouble) + " сотых" :
                                      "" + numToStr((int)numDouble, !this.isDouble) + tmp + numToStr(desCast(numDouble, numAfterComma), !this.isDouble) + " сотых" ;
@@ -70,7 +64,6 @@ public class WorkWithString {
                 return this.BELLOW_TWENTY[tmp];
             }
         }
-
 
         if (tmp < 100) {
             return this.TENS[tmp / 10] + ((tmp % 10 != 0) ? " " + this.BELLOW_TWENTY[tmp % 10]: "");
@@ -144,6 +137,17 @@ public class WorkWithString {
         }
         else {
             return numToStr(num, this.isDouble) + " " + this.MILLIONS[2];
+        }
+    }
+
+    private String specialValueIntegerPartDouble(int num) {
+        boolean isOne = num % 10 == 1 || num != 11 || num != 1 || num != 111;
+
+        if (isOne) {
+            return " целая ";
+        }
+        else {
+            return " целых ";
         }
     }
 
