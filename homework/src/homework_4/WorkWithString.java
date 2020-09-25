@@ -26,8 +26,8 @@ public class WorkWithString {
         int numAfterComma = 2;
 
         if (numDouble >= -999_999_999.999 && numDouble <= 999_999_999.999) {
-            result = numDouble < 0 ? "минус " + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" : ""
-                                              + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" ;
+            result = numDouble < 0 ? "минус " + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" :
+                                     "" + numToStr((int)numDouble) + " целых " + numToStr(desCast(numDouble, numAfterComma)) + " сотых" ;
         } else {
             result = "введите другое число";
         }
