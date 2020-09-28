@@ -1,8 +1,5 @@
 package homework_6;
 
-import java.io.File;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Set;
 
 public class WarAndPeaseMain {
