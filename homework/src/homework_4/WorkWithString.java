@@ -1,5 +1,6 @@
 package homework_4;
 
+import java.time.Duration;
 import java.util.Locale;
 
 public class WorkWithString {
@@ -9,9 +10,13 @@ public class WorkWithString {
     private final String[] HUNDREDS = { "", "сто", "двести" , "триста", "четыреста", "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот" };
     private final String[] THOUSANDS = { "тысяча", "тысячи", "тысяч" };
     private final String[] MILLIONS = { "миллион", "миллиона", "миллионов" };
-    private final String[] WEEK = { " неделя", " недели", " недель" };
     private final String[] AFTER_POINT = { " сотая", " сотых" };
     private final String[] BEFORE_POINT = { " целая ", " целых " };
+    private final String[] WEEK = { " неделя", " недели", " недель" };
+    private final String[] HOURS = { " час ", " часа ", " часов " };
+    private final String[] MINUTES = { " минута ", " минуты ", " минут " };
+    private final String[] SECONDS = { " секунда ", " секунды ", " секунд " };
+    private final String[] MILLISECONDS = { " миллисекунда ", " миллисекунды ", " миллисекунд " };
     private boolean isDouble = false;
 
     public String intToStr(int numInt) {
@@ -144,10 +149,10 @@ public class WorkWithString {
         boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
 
         if (isOne) {
-            return this.BEFORE_POINT[0];
+            return this.BEFORE_POINT[1];
         }
         else {
-            return this.BEFORE_POINT[1];
+            return this.BEFORE_POINT[0];
         }
     }
 
@@ -155,10 +160,10 @@ public class WorkWithString {
         boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
 
         if (isOne) {
-            return this.AFTER_POINT[0];
+            return this.AFTER_POINT[1];
         }
         else {
-            return this.AFTER_POINT[1];
+            return this.AFTER_POINT[0];
         }
     }
 
@@ -178,6 +183,38 @@ public class WorkWithString {
             return tmp + this.WEEK[0];
         } else {
             return tmp + this.WEEK[2];
+        }
+    }
+
+    public String toHoursMinuteSecondMillisecond(long millisecond, boolean shortFormat) {
+        Duration timeLeft = Duration.ofMillis(millisecond);
+
+        if (shortFormat) {
+            return String.format("%02d:%02d:%02d:%03d",
+                    timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart(), timeLeft.toMillisPart());
+        } else {
+            return String.format("%d " + timeToWriteString(timeLeft.toHoursPart(), this.HOURS) +
+                                " %d " + timeToWriteString(timeLeft.toMinutesPart(), this.MINUTES) +
+                                " %d " + timeToWriteString(timeLeft.toSecondsPart(), this.SECONDS) +
+                                " %d " + timeToWriteString(timeLeft.toMillisPart(), this.MILLISECONDS),
+                    timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart(), timeLeft.toMillisPart());
+        }
+    }
+
+    private String timeToWriteString(int time, String[] array) {
+        boolean isOne = time % 10 == 1 && time != 11 && time != 111;
+        boolean isTwo = time % 10 == 2 && time != 12 && time != 2 && time != 112;
+        boolean isThree = time % 10 == 3 && time != 13 && time !=3 && time != 113;
+        boolean isFour = time % 10 == 4 && time != 14 && time !=4 && time != 114;
+
+        if (isOne) {
+            return array[0];
+        }
+        if (isTwo || isThree || isFour) {
+            return array[1];
+        }
+        else {
+            return array[2];
         }
     }
 }

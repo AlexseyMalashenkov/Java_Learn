@@ -1,6 +1,7 @@
 package homework_4;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class StringsMain {
     public static void main(String[] args) {
@@ -33,5 +34,7 @@ public class StringsMain {
         } else {
             System.out.println("Вы ввели не целочисленное число! Пример: 123456789");
         }
+
+        System.out.println(workWithString.toHoursMinuteSecondMillisecond(3600001, false));
     }
 }
