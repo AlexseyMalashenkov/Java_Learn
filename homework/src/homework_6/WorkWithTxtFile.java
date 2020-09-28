@@ -3,7 +3,9 @@ package homework_6;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class WorkWithTxtFile {
@@ -24,11 +26,13 @@ public class WorkWithTxtFile {
         return content;
     }
 
-    public Set<String> findDups(String[] str) {
-        Set<String> uniques = new HashSet<String>();
-        Set<String> dups    = new HashSet<String>();
+    public Set<String> findDups(String str) {
+        Set<String> uniques = new HashSet();
+        Set<String> dups = new HashSet();
 
-        for (String s : str) {
+        String[] strings = strToArray(str);
+
+        for (String s : strings) {
             if (!uniques.add(s)) {
                 dups.add(s);
             }
@@ -39,22 +43,25 @@ public class WorkWithTxtFile {
         return uniques;
     }
 
-    public String[] singleWord(String str) {
+    private String[] strToArray(String str) {
         str = str.replaceAll("[^a-zA-Zа-яА-Я]", " ");
         return str.split("\\s+");
     }
 
-    public static void save(Set<String> obj, String path) throws Exception {
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter(
-                    new OutputStreamWriter(new FileOutputStream(path), "UTF-8"));
-            for (String s : obj) {
-                pw.println(s);
+    public Map<String, Integer> topTenWords(String str) {
+        Map<String, Integer> result = new HashMap<>();
+
+        String[] strings = strToArray(str);
+
+        for (int i = 0; i < strings.length; i++) {
+            Integer val = result.get(strings[i]);
+            if (val != null) {
+                result.put(strings[i], val + 1);
+            } else {
+                result.put(strings[i], 1);
             }
-            pw.flush();
-        } finally {
-            pw.close();
         }
+
+        return result;
     }
 }
