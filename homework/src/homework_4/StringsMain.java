@@ -1,7 +1,6 @@
 package homework_4;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class StringsMain {
     public static void main(String[] args) {
