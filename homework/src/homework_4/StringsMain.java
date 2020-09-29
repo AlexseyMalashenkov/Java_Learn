@@ -34,6 +34,6 @@ public class StringsMain {
             System.out.println("Вы ввели не целочисленное число! Пример: 123456789");
         }
 
-        System.out.println(workWithString.toHoursMinuteSecondMillisecond(3600001, false));
+        System.out.println(workWithString.toHoursMinuteSecondMillisecond(3601001, false));
     }
 }
