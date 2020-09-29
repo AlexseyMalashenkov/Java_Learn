@@ -3,10 +3,7 @@ package homework_6;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class WorkWithTxtFile {
 
@@ -26,25 +23,15 @@ public class WorkWithTxtFile {
         return content;
     }
 
-    public Set<String> findDups(String str) {
-        Set<String> uniques = new HashSet();
-        Set<String> dups = new HashSet();
-
+    public Set<String> findUniq(String str) {
         String[] strings = strToArray(str);
+        Set<String> mySet = new HashSet<>(Arrays.asList(strings));
 
-        for (String s : strings) {
-            if (!uniques.add(s)) {
-                dups.add(s);
-            }
-        }
-
-        uniques.removeAll(dups);
-
-        return uniques;
+        return mySet;
     }
 
     private String[] strToArray(String str) {
-        str = str.replaceAll("[^a-zA-Zа-яА-Я]", " ");
+        str = str.replaceAll("[^а-яА-Я]", " ");
         return str.split("\\s+");
     }
 

@@ -1,7 +1,6 @@
 package homework_6;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class WarAndPeaceMain {
     public static void main(String[] args) {
@@ -10,14 +9,13 @@ public class WarAndPeaceMain {
 
         String warAndPeace= workWithTxtFile.readAllBytesJava7(filePath);
 
-        Set<String> uniq = workWithTxtFile.findDups(warAndPeace);
+        Set<String> uniq = workWithTxtFile.findUniq(warAndPeace);
 
         System.out.println(uniq.size());
 
         Map<String, Integer> result = workWithTxtFile.topTenWords(warAndPeace);
 
         for(Map.Entry<String, Integer> item : result.entrySet()){
-
             System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
         }
     }
