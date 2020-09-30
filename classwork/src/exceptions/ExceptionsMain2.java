@@ -11,6 +11,5 @@ public class ExceptionsMain2 {
         } catch (StackOverflowError error) {
             System.out.println("ERROR");
         }
-
     }
 }
