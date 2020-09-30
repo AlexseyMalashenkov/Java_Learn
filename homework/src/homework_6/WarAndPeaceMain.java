@@ -1,22 +1,21 @@
 package homework_6;
 
+import java.io.IOException;
 import java.util.*;
 
 public class WarAndPeaceMain {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         WorkWithTxtFile workWithTxtFile = new WorkWithTxtFile();
         String filePath = "homework/src/homework_6/resources/Война и мир_книга.txt";
 
         String warAndPeace= workWithTxtFile.readAllBytesJava7(filePath);
 
-        Set<String> uniq = workWithTxtFile.findUniq(warAndPeace);
+        Set<String> unique = workWithTxtFile.findUnique(warAndPeace);
 
-        System.out.println(uniq.size());
+        System.out.println(unique.size());
 
-        Map<String, Integer> result = workWithTxtFile.topTenWords(warAndPeace);
+        Map<String, Integer> map = workWithTxtFile.topWords(warAndPeace);
 
-        for(Map.Entry<String, Integer> item : result.entrySet()){
-            System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
-        }
+        workWithTxtFile.printTopTenWords(map);
     }
 }
