@@ -4,17 +4,13 @@ import java.util.Comparator;
 import java.util.Map;
 
 public class TopWordComparator implements Comparator<String> {
-    Map<String, Integer> base;
+    Map<String, Integer> map;
 
-    public TopWordComparator(Map<String, Integer> base) {
-        this.base = base;
+    public TopWordComparator(Map<String, Integer> map) {
+        this.map = map;
     }
 
     public int compare(String a, String b) {
-        if (base.get(a) >= base.get(b)) {
-            return -1;
-        } else {
-            return 1;
-        }
+        return map.get(b).compareTo(map.get(a));
     }
 }

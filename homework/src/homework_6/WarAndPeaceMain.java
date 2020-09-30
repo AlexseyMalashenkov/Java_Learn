@@ -17,5 +17,15 @@ public class WarAndPeaceMain {
         Map<String, Integer> map = workWithTxtFile.topWords(warAndPeace);
 
         workWithTxtFile.printTopTenWords(map);
+
+        EasySearch search = new EasySearch();
+        System.out.println("Слово война встречается в тексте " + search.search(warAndPeace.toLowerCase(), "война") + " раз.");
+        System.out.println("Слово и встречается в тексте " + search.search(warAndPeace.toLowerCase(), "и") + " раз.");
+        System.out.println("Слово мир встречается в тексте " + search.search(warAndPeace.toLowerCase(), "мир") + " раз.");
+
+        RegExSearch exSearch = new RegExSearch();
+        System.out.println("Слово война встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "война") + " раз.");
+        System.out.println("Слово и встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "и") + " раз.");
+        System.out.println("Слово мир встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "мир") + " раз.");
     }
 }

@@ -2,7 +2,6 @@ package homework_6;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -21,14 +20,10 @@ public class WorkWithTxtFile {
         return content;
     }
 
-    public Set<String> findUnique(String str) throws IOException {
+    public Set<String> findUnique(String str) {
         String[] strings = strToArray(str);
-        Path pathForSaveSet = Paths.get("homework/src/homework_6/resources/Война и мир_книга_set_out.txt");
-        Set<String> mySet = new HashSet<>(Arrays.asList(strings));
 
-        Files.write(pathForSaveSet, mySet);
-
-        return mySet;
+        return new HashSet<>(Arrays.asList(strings));
     }
 
     private String[] strToArray(String str) {
@@ -63,7 +58,6 @@ public class WorkWithTxtFile {
         for(Map.Entry<String, Integer> item : sorted_map.entrySet()){
             if (i <= 10) {
                 System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
-
             }
             i++;
         }
