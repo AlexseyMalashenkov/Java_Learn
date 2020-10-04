@@ -10,6 +10,9 @@ public class EasySearch implements ISearchEngine{
 
         text = text + " ";
         int idxOfNextWord = 0;
+        
+        text.indexOf(word);
+
         List<String> list = new ArrayList<>();
 
         for(int i = 0; i < text.length(); i++)

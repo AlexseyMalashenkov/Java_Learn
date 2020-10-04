@@ -1,10 +1,9 @@
 package homework_6;
 
-import java.io.IOException;
 import java.util.*;
 
 public class WarAndPeaceMain {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         WorkWithTxtFile workWithTxtFile = new WorkWithTxtFile();
         String filePath = "homework/src/homework_6/resources/Война и мир_книга.txt";
 
