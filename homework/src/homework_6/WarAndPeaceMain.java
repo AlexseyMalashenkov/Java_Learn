@@ -26,5 +26,11 @@ public class WarAndPeaceMain {
         System.out.println("Слово война встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "война") + " раз.");
         System.out.println("Слово и встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "и") + " раз.");
         System.out.println("Слово мир встречается в тексте " + exSearch.search(warAndPeace.toLowerCase(), "мир") + " раз.");
+
+
+        PrimitivEasySearch primitivEasySearch = new PrimitivEasySearch();
+        System.out.println("Слово война встречается в тексте " + primitivEasySearch.search(warAndPeace.toLowerCase(), "война") + " раз.");
+        System.out.println("Слово и встречается в тексте " + primitivEasySearch.search(warAndPeace.toLowerCase(), "и") + " раз.");
+        System.out.println("Слово мир встречается в тексте " + primitivEasySearch.search(warAndPeace.toLowerCase(), "мир") + " раз.");
     }
 }
