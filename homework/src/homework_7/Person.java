@@ -1,5 +1,6 @@
 package homework_7;
 
+
 public class Person {
     private String nick;
     private String password;

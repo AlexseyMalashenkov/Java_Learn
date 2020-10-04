@@ -2,9 +2,9 @@ package homework_7;
 
 import java.util.Comparator;
 
-public class AnimalComparatorAge implements Comparator<Animal> {
+public class AnimalComparatorAge implements Comparator<Byte> {
     @Override
-    public int compare(Animal o1, Animal o2) {
-        return 0;
+    public int compare(Byte o1, Byte o2) {
+        return o1.compareTo(o2);
     }
 }
