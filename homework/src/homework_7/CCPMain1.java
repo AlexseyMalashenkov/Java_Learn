@@ -2,7 +2,7 @@ package homework_7;
 
 import java.util.TreeSet;
 
-public class CCPMain {
+public class CCPMain1 {
     public static void main(String[] args) {
         Animal animal2 = new Animal(10, "Игнат");
         Animal animal4 = new Animal(10, "Ярик");
@@ -20,6 +20,5 @@ public class CCPMain {
         for (Animal a : animals) {
             System.out.println(a.getAge() + " " + a.getNick());
         }
-
     }
 }
