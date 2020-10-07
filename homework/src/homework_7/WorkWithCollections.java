@@ -2,8 +2,10 @@ package homework_7;
 
 import collections.utils.AnyRandom;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static collections.utils.AnyRandom.getRandomNumberInRange;
 
 public class WorkWithCollections {
     public void printIteratorWhile(Collection collection) {
@@ -44,12 +46,17 @@ public class WorkWithCollections {
         System.out.println(collection.getClass() + " время вывода используя iterator и for: " + (finish - start));
     }
 
-    public void addElements(Collection collection) {
+    public void addElements(Collection collection, boolean isPeople) {
         long start = System.currentTimeMillis();
 
         for (int i = 0; i < 1_000_000; i++) {
-            collection.add(new Person(AnyRandom.nextString(AnyRandom.getRandomNumberInRange(5, 10)),
-                                      AnyRandom.nextString(AnyRandom.getRandomNumberInRange(5, 10))));
+            if (isPeople == true) {
+                collection.add(new Person(AnyRandom.nextString(getRandomNumberInRange(5, 10)),
+                        AnyRandom.nextString(getRandomNumberInRange(5, 10))));
+            } else {
+                collection.add(new Animal(getRandomNumberInRange(5, 10),
+                        AnyRandom.nextString(getRandomNumberInRange(5, 10))));
+            }
         }
 
         long finish = System.currentTimeMillis();
@@ -131,5 +138,25 @@ public class WorkWithCollections {
         long finish = System.currentTimeMillis();
 
         System.out.println(collection.getClass() + " время удаления используя iterator & while: " + (finish - start));
+    }
+
+    public void sortList(List list, Comparator comparator) {
+        long start = System.currentTimeMillis();
+
+        list.sort(comparator);
+
+        long finish = System.currentTimeMillis();
+
+        System.out.println("Время сортировки List: " + (finish - start));
+    }
+
+    public void sortSet(Set set, Comparator comparator) {
+        long start = System.currentTimeMillis();
+
+        printIteratorWhile(Collections.singleton(set.stream().sorted(comparator).collect(Collectors.toList())));
+
+        long finish = System.currentTimeMillis();
+
+        System.out.println("Время сортировки Set: " + (finish - start));
     }
 }

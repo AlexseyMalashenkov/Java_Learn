@@ -14,14 +14,19 @@ public class CCPMain2 {
 
         WorkWithCollections collections = new WorkWithCollections();
 
-        collections.addElements(personLinkedList);
-        collections.addElements(personArrayList);
-        collections.addElements(personHashSet);
-        collections.addElements(personTreeSet);
+        collections.addElements(personLinkedList, true);
+        collections.addElements(personArrayList, true);
+        collections.addElements(personHashSet, true);
+        collections.addElements(personTreeSet, true);
 
         System.out.println(personLinkedList.size());
         System.out.println(personArrayList.size());
         System.out.println(personHashSet.size());
         System.out.println(personTreeSet.size());
+
+        collections.sortList(personLinkedList, comparatorPersons);
+        collections.sortList(personArrayList, comparatorPersons);
+
+        collections.sortSet(personHashSet, comparatorPersons);
     }
 }
