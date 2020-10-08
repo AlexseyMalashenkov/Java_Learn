@@ -11,11 +11,11 @@ public class WarAndPeaceMain {
 
         Set<String> unique = workWithTxtFile.findUnique(warAndPeace);
 
-        System.out.println(unique.size());
+        System.out.println("Количество уникальных слов: " + unique.size());
 
         Map<String, Integer> map = workWithTxtFile.topWords(warAndPeace);
 
-        workWithTxtFile.printTopTenWords(map);
+        workWithTxtFile.printTopTenWords(map, 10);
 
         EasySearch search = new EasySearch();
         System.out.println("Слово война встречается в тексте " + search.search(warAndPeace.toLowerCase(), "война") + " раз.");

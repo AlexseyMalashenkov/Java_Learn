@@ -47,19 +47,24 @@ public class WorkWithTxtFile {
         return result;
     }
 
-    public void printTopTenWords(Map<String, Integer> map) {
+    public void printTopTenWords(Map<String, Integer> map, int count) {
         TopWordComparator comparator = new TopWordComparator(map);
         TreeMap<String, Integer> sorted_map = new TreeMap<>(comparator);
 
         sorted_map.putAll(map);
 
-
-        int i = 0;
-        for(Map.Entry<String, Integer> item : sorted_map.entrySet()){
-            if (i <= 10) {
-                System.out.printf("Key: %s  Value: %d \n", item.getKey(), item.getValue());
+        if (count <= sorted_map.size()) {
+            int i = 0;
+            for(Map.Entry<String, Integer> item : sorted_map.entrySet()){
+                if (i <= count) {
+                    System.out.printf("Слово: %s \t Количество: %d \n", item.getKey(), item.getValue());
+                }
+                i++;
             }
-            i++;
+        } else {
+            System.out.println("Вы ввели не правильное количество слов");
         }
+
+
     }
 }
