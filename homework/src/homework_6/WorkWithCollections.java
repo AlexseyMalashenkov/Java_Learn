@@ -22,7 +22,7 @@ public class WorkWithCollections {
         System.out.println(collection.getClass() + " время вывода используя iterator & while: " + (finish - start));
     }
 
-    public void printIteratorForEach(Collection collection) {
+    public void printForEach(Collection collection) {
         long start = System.currentTimeMillis();
 
         for (Object o : collection) {
