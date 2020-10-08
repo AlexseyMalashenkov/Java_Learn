@@ -5,7 +5,7 @@ import java.util.*;
 public class WarAndPeaceMain {
     public static void main(String[] args) {
         WorkWithTxtFile workWithTxtFile = new WorkWithTxtFile();
-        String filePath = "homework/src/homework_6/resources/Война и мир_книга.txt";
+        String filePath = "homework/src/homework_5/resources/Война и мир_книга.txt";
 
         String warAndPeace= workWithTxtFile.readAllBytesJava7(filePath);
 
