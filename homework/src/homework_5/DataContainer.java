@@ -77,6 +77,7 @@ public class DataContainer <T> {
     public void sort(Comparator<T> comparator) {
         boolean isSorted = false;
         T tmp;
+        deleteNullElements();
 
         while (!isSorted) {
             isSorted = true;
@@ -139,7 +140,15 @@ public class DataContainer <T> {
 
     @Override
     public String toString() {
-        deleteNullElements();
-        return "DataContainer {" + "data = " + Arrays.toString(this.data) + "}";
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < this.data.length; i++) {
+            if (this.data[i] != null) {
+                stringBuilder.append(this.data[i].toString());
+            }
+            if (i != this.data.length - 1) {
+                stringBuilder.append(", ");
+            }
+        }
+        return stringBuilder.toString();
     }
 }

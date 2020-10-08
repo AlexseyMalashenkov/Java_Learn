@@ -4,7 +4,7 @@ import homework_3.ICalculatorCommand;
 
 public class HWMain {
     public static void main(String[] args) {
-        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 0);
+        DataContainer<Integer> dataContainer = new DataContainer<>(Integer.class, 100);
         ComparatorInteger comparatorInteger = new ComparatorInteger();
 
         System.out.println(dataContainer.add(58));
