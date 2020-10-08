@@ -11,7 +11,7 @@ public class Task_4 {
     }
 
     public static boolean sleepIn(boolean weekday, boolean vacation) {
-        if(weekday == true || vacation == true) {
+        if(vacation || !weekday) {
             return true;
         } else {
             return false;
