@@ -23,7 +23,11 @@ public class Person {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        if (password.length() > 10 || password.length() < 5) {
+            this.password = "qwerty";
+        } else {
+            this.password = password;
+        }
     }
 
     @Override

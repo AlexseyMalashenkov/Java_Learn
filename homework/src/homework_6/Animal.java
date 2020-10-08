@@ -5,12 +5,7 @@ public class Animal {
     private String nick;
 
     public Animal(int age, String nick) {
-        if (age >= 1 && age <= 15) {
-            this.age = age;
-        } else {
-            System.out.println("Животные столько не живут... Будет создано дефолтный возраст...");
-            this.age = 1;
-        }
+        this.age = age;
         this.nick = nick;
     }
 
@@ -19,7 +14,11 @@ public class Animal {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 1 && age <= 15) {
+            this.age = age;
+        } else {
+            this.age = 1;
+        }
     }
 
     public String getNick() {
