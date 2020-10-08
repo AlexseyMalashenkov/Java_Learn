@@ -149,10 +149,10 @@ public class WorkWithString {
         boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
 
         if (isOne) {
-            return this.BEFORE_POINT[1];
+            return this.BEFORE_POINT[0];
         }
         else {
-            return this.BEFORE_POINT[0];
+            return this.BEFORE_POINT[1];
         }
     }
 
@@ -160,10 +160,10 @@ public class WorkWithString {
         boolean isOne = num % 10 == 1 && num != 11 && num != 1 && num != 111;
 
         if (isOne) {
-            return this.AFTER_POINT[1];
+            return this.AFTER_POINT[0];
         }
         else {
-            return this.AFTER_POINT[0];
+            return this.AFTER_POINT[1];
         }
     }
 
