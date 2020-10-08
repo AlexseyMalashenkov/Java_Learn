@@ -1,4 +1,4 @@
-package homework_7;
+package homework_6;
 
 import collections.utils.AnyRandom;
 

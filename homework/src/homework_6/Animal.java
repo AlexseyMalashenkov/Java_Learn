@@ -1,4 +1,4 @@
-package homework_7;
+package homework_6;
 
 public class Animal {
     private int age;

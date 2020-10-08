@@ -1,4 +1,4 @@
-package homework_6;
+package homework_5;
 
 public class PrimitivEasySearch implements ISearchEngine{
     @Override

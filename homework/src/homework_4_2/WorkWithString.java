@@ -1,4 +1,4 @@
-package homework_4;
+package homework_4_2;
 
 import java.time.Duration;
 import java.util.Locale;

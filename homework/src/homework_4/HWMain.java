@@ -1,6 +1,4 @@
-package homework_5;
-
-import homework_3.ICalculatorCommand;
+package homework_4;
 
 public class HWMain {
     public static void main(String[] args) {
