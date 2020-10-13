@@ -1,9 +1,11 @@
 package homework_6;
 
+import homework_6.utils.ParseJSON;
+
 import java.util.TreeSet;
 
 public class CCPMain1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         Animal animal2 = new Animal(10, "Игнат");
         Animal animal4 = new Animal(10, "Ярик");
         Animal animal1 = new Animal(10, "Анатолий");
@@ -20,5 +22,8 @@ public class CCPMain1 {
         for (Animal a : animals) {
             System.out.println(a.getAge() + " " + a.getNick());
         }
+
+        ParseJSON parseJSON = new ParseJSON();
+        parseJSON.parse();
     }
 }
