@@ -1,7 +1,5 @@
 package homework_6;
 
-import homework_6.utils.ParseJSON;
-
 import java.util.TreeSet;
 
 public class CCPMain1 {
@@ -22,8 +20,5 @@ public class CCPMain1 {
         for (Animal a : animals) {
             System.out.println(a.getAge() + " " + a.getNick());
         }
-
-        ParseJSON parseJSON = new ParseJSON();
-        parseJSON.parse();
     }
 }
