@@ -2,14 +2,14 @@ package threads.core;
 
 import java.util.concurrent.TimeUnit;
 
-public class MyJobRepeatable implements Runnable {
+public class MyJobRepeatableNotInf implements Runnable {
     @Override
     public void run() {
         String oldName = Thread.currentThread().getName();
         Thread.currentThread().setName("777");
         try {
             ThreadUtils.printAboutCurrentThread();
-            while (1 == 1) {
+            for (int i = 0; i < 10; i++) {
                 try {
                     TimeUnit.MILLISECONDS.sleep(100);
                 } catch (InterruptedException e) {
@@ -20,8 +20,5 @@ public class MyJobRepeatable implements Runnable {
         } finally {
             Thread.currentThread().setName(oldName);
         }
-
-
-
     }
 }
