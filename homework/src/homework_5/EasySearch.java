@@ -7,8 +7,6 @@ public class EasySearch implements ISearchEngine{
         for (int i = text.indexOf(word); i >= 0; i = text.indexOf(word, i + 1)) {
             count++;
         }
-
-
         return count;
     }
 

@@ -1,5 +1,10 @@
 package homework_8.site_loader;
 
+import homework_5.EasySearch;
+import homework_8.utils.WorkWithJSON;
+
+import java.util.HashMap;
+
 /**
  * Загрузчик курса с сайта Нац. Банка
  */
@@ -23,7 +28,14 @@ public class NBRBLoader extends SiteLoader{
      */
     @Override
     protected double handle(String content, SiteLoader.Currency currencyName) {
+        EasySearch search = new EasySearch();
+        WorkWithJSON parseJSON = new WorkWithJSON(content);
+
+        HashMap<String, String> jsonMap = parseJSON.parse();
+        
+        System.out.println(jsonMap);
         //TODO дописываем код сюда
-        return 0;
+
+        return 10;
     }
 }
