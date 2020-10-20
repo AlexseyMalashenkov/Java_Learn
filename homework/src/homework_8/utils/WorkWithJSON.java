@@ -1,12 +1,13 @@
 package homework_8.utils;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WorkWithJSON {
-    public HashMap<String, String> parse(String json) {
-        HashMap<String, String> jsonMap = new HashMap<>();
+    public Map<String, String> parse(String json) {
+        Map<String, String> jsonMap = new HashMap();
         Pattern re = Pattern.compile("(?:,|\\{)?([^:]*):(\"[^\"]*\"|\\{[^}]*\\}|[^},]*)",
                     Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
         Matcher m = re.matcher(json);

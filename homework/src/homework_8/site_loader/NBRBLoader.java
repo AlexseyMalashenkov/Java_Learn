@@ -1,8 +1,10 @@
 package homework_8.site_loader;
 
 import homework_8.utils.WorkWithJSON;
+import oop.Man;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Загрузчик курса с сайта Нац. Банка
@@ -29,12 +31,13 @@ public class NBRBLoader extends SiteLoader{
     protected double handle(String content, SiteLoader.Currency currencyName) {
         WorkWithJSON parseJSON = new WorkWithJSON();
 
-        HashMap<String, String> jsonMap = parseJSON.parse(content);
+        Map<String, String> jsonMap = parseJSON.parse(content);
 
         System.out.println(jsonMap.get("Cur_Scale") + " "
                             + jsonMap.get("Cur_Name") + " = "
                             + jsonMap.get("Cur_OfficialRate") + " Беларуских рублей "
                             + jsonMap.get("Date"));
-        return 10;
+
+        return Double.parseDouble(jsonMap.get("Cur_OfficialRate"));
     }
 }
