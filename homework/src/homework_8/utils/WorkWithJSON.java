@@ -1,7 +1,6 @@
 package homework_8.utils;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,9 +32,5 @@ public class WorkWithJSON {
         }
 
         return ((st > 0) || (len < value.length())) ? new String(val, st, len - st) : value;
-    }
-
-    public String findInJSONString(HashMap<String, String> json, String findStr) {
-        return json.get(findStr);
     }
 }
