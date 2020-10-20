@@ -1,21 +1,16 @@
 package homework_8.utils;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class WorkWithJSON {
-    private String json;
-
-    public WorkWithJSON(String json) {
-        this.json = json;
-    }
-
-    public HashMap<String, String> parse() {
+    public HashMap<String, String> parse(String json) {
         HashMap<String, String> jsonMap = new HashMap<>();
         Pattern re = Pattern.compile("(?:,|\\{)?([^:]*):(\"[^\"]*\"|\\{[^}]*\\}|[^},]*)",
                     Pattern.CASE_INSENSITIVE | Pattern.MULTILINE | Pattern.DOTALL);
-        Matcher m = re.matcher(this.json);
+        Matcher m = re.matcher(json);
 
         while (m.find()) {
             jsonMap.put(trim2(m.group(1)), trim2(m.group(2)));
@@ -40,8 +35,7 @@ public class WorkWithJSON {
         return ((st > 0) || (len < value.length())) ? new String(val, st, len - st) : value;
     }
 
-    public String findInJSONString(HashMap<String, String> json, String jsonStr) {
-
-        return "";
+    public String findInJSONString(HashMap<String, String> json, String findStr) {
+        return json.get(findStr);
     }
 }
