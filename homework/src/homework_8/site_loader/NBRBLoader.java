@@ -1,9 +1,7 @@
 package homework_8.site_loader;
 
 import homework_8.utils.WorkWithJSON;
-import oop.Man;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**

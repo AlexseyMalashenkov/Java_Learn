@@ -13,10 +13,9 @@ public class WorkWithRatesMain {
     private static void startLogic() {
         System.out.println("Введите курсы какого банка вам необходимы:" + "\n" + "\n" +
                 "Альфа-банк (Беларусь) - введите 1" + "\n" +
-                "Приорбанк - введите 2" + "\n" +
-                "Белагропромбанк - введите 3" + "\n" +
-                "БПС-Сбербанк - введите 4" + "\n" +
-                "Беларусбанк - введите 5" + "\n" +
+                "Белагропромбанк - введите 2" + "\n" +
+                "БПС-Сбербанк - введите 3" + "\n" +
+                "Беларусбанк - введите 4" + "\n" +
                 "Национальный банк Республики Беларусь - введите 0" + "\n");
 
         try {
@@ -27,15 +26,12 @@ public class WorkWithRatesMain {
                     System.out.println("Вы выбрали Альфа-банк (Беларусь)");
                     break;
                 case 2:
-                    System.out.println("Вы выбрали Приорбанк");
-                    break;
-                case 3:
                     System.out.println("Вы выбрали Белагропромбанк");
                     break;
-                case 4:
+                case 3:
                     System.out.println("Вы выбрали БПС-Сбербанк");
                     break;
-                case 5:
+                case 4:
                     System.out.println("Вы выбрали Беларусбанк");
                     break;
                 case 0:
