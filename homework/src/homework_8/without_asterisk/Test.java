@@ -1,4 +1,4 @@
-package homework_8.site_loader;
+package homework_8.without_asterisk;
 
 public class Test {
     public static void main(String[] args) {

@@ -1,10 +1,8 @@
-package homework_8.site_loader;
+package homework_8.site_loader_with_asterisk;
 
-import homework_8.utils.WorkWithXML;
+import homework_8.without_asterisk.SiteLoader;
 
-import java.util.Map;
-
-public class APBLoader extends SiteLoader{
+public class APBLoader extends SiteLoader {
     @Override
     public double load(Currency currencyName) {
         return 0;

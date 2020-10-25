@@ -1,4 +1,4 @@
-package homework_8.site_loader;
+package homework_8.site_loader_with_asterisk;
 
 import homework_8.utils.WorkWithJSON;
 
@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * Загрузчик курса с сайта Нац. Банка
  */
-public class NBRBLoader extends SiteLoader{
+public class NBRBLoaderJSON extends SiteLoaderJSON {
 
     /**
      * Метод для запуска загрузки курса валют
@@ -15,7 +15,7 @@ public class NBRBLoader extends SiteLoader{
      * @return курс который мы нашли
      */
     @Override
-    public double load(SiteLoader.Currency currencyName) {
+    public double load(Currency currencyName) {
         return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId(), currencyName);
     }
 
@@ -26,7 +26,7 @@ public class NBRBLoader extends SiteLoader{
      * @return курс который мы нашли
      */
     @Override
-    protected double handle(String content, SiteLoader.Currency currencyName) {
+    protected double handle(String content, Currency currencyName) {
         WorkWithJSON parseJSON = new WorkWithJSON();
 
         Map<String, String> jsonMap = parseJSON.parse(content);

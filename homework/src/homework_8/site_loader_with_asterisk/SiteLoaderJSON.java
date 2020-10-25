@@ -1,4 +1,4 @@
-package homework_8.site_loader;
+package homework_8.site_loader_with_asterisk;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -8,7 +8,7 @@ import java.net.URL;
 /**
  * Реализация загрузчика сайтов
  */
-public abstract class SiteLoader {
+public abstract class SiteLoaderJSON {
 
     public enum Currency{
         USD("145"),
@@ -32,7 +32,7 @@ public abstract class SiteLoader {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected final double load(String urlToSite, SiteLoader.Currency currencyName){
+    protected final double load(String urlToSite, Currency currencyName){
 
         StringBuilder content;
         boolean error;
@@ -70,7 +70,7 @@ public abstract class SiteLoader {
         return handle(content.toString(), currencyName);
     }
 
-    public abstract double load(SiteLoader.Currency currencyName);
+    public abstract double load(Currency currencyName);
 
     /**
      * Метод который будет дёрнут после успешной загрузки сайта
@@ -78,5 +78,5 @@ public abstract class SiteLoader {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected abstract double handle(String content, SiteLoader.Currency currencyName);
+    protected abstract double handle(String content, Currency currencyName);
 }

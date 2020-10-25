@@ -1,6 +1,8 @@
-package homework_8.site_loader;
+package homework_8.site_loader_with_asterisk;
 
-public class AlfaLoader extends SiteLoader{
+import homework_8.without_asterisk.SiteLoader;
+
+public class BelarusBankLoader extends SiteLoader {
     @Override
     public double load(Currency currencyName) {
         return 0;
