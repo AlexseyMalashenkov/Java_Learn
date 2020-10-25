@@ -1,14 +1,15 @@
-package homework_8.without_asterisk;
+package homework_8.site_loader_with_asterisk;
 
 import homework_8.utils.WorkWithJSON;
+import homework_8.without_asterisk.SiteLoader;
 
 import java.util.Map;
 
 /**
  * Загрузчик курса с сайта Нац. Банка
  */
-public class NBRBLoader extends SiteLoader{
-    private final String rateKey = "Cur_OfficialRate";
+public class NBRBLoader extends SiteLoader {
+
     /**
      * Метод для запуска загрузки курса валют
      * @param currencyName валюта которую мы ищем
@@ -27,17 +28,15 @@ public class NBRBLoader extends SiteLoader{
      */
     @Override
     protected double handle(String content, SiteLoader.Currency currencyName) {
-        String strRate;
-        int currencyIndex = content.indexOf(rateKey);
-        double rate = 0;
+        WorkWithJSON parseJSON = new WorkWithJSON();
 
-        try{
-            strRate = content.substring((currencyIndex + 18), (currencyIndex + 24));
-            rate += Double.parseDouble(strRate);
-        } catch (NullPointerException | NumberFormatException ex){
-            System.out.println(ex.getMessage());
-        }
+        Map<String, String> jsonMap = parseJSON.parse(content);
 
-        return rate;
+        System.out.println(jsonMap.get("Cur_Scale") + " "
+                            + jsonMap.get("Cur_Name") + " = "
+                            + jsonMap.get("Cur_OfficialRate") + " Беларуских рублей "
+                            + jsonMap.get("Date"));
+
+        return Double.parseDouble(jsonMap.get("Cur_OfficialRate"));
     }
 }
