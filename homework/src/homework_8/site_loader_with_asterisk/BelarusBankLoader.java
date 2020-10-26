@@ -1,15 +1,14 @@
 package homework_8.site_loader_with_asterisk;
 
-import homework_8.without_asterisk.SiteLoader;
 
-public class BelarusBankLoader extends SiteLoader {
+public class BelarusBankLoader extends SiteLoaderJSON {
     @Override
-    public double load(Currency currencyName) {
-        return 0;
+    public String load(Currency currencyName) {
+        return "";
     }
 
     @Override
-    protected double handle(String content, Currency currencyName) {
-        return 0;
+    protected String handle(String content, Currency currencyName) {
+        return "";
     }
 }
