@@ -32,7 +32,7 @@ public abstract class SiteLoaderJSON {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected final double load(String urlToSite, Currency currencyName){
+    protected final String load(String urlToSite, Currency currencyName){
 
         StringBuilder content;
         boolean error;
@@ -70,7 +70,7 @@ public abstract class SiteLoaderJSON {
         return handle(content.toString(), currencyName);
     }
 
-    public abstract double load(Currency currencyName);
+    public abstract String load(Currency currencyName);
 
     /**
      * Метод который будет дёрнут после успешной загрузки сайта
@@ -78,5 +78,5 @@ public abstract class SiteLoaderJSON {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected abstract double handle(String content, Currency currencyName);
+    protected abstract String handle(String content, Currency currencyName);
 }

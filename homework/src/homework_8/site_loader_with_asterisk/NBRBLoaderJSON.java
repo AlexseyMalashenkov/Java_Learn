@@ -15,7 +15,7 @@ public class NBRBLoaderJSON extends SiteLoaderJSON {
      * @return курс который мы нашли
      */
     @Override
-    public double load(Currency currencyName) {
+    public String load(Currency currencyName) {
         return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId(), currencyName);
     }
 
@@ -26,16 +26,14 @@ public class NBRBLoaderJSON extends SiteLoaderJSON {
      * @return курс который мы нашли
      */
     @Override
-    protected double handle(String content, Currency currencyName) {
+    protected String handle(String content, Currency currencyName) {
         WorkWithJSON parseJSON = new WorkWithJSON();
 
         Map<String, String> jsonMap = parseJSON.parse(content);
 
-        System.out.println(jsonMap.get("Cur_Scale") + " "
-                            + jsonMap.get("Cur_Name") + " = "
-                            + jsonMap.get("Cur_OfficialRate") + " Беларуских рублей "
-                            + jsonMap.get("Date"));
-
-        return Double.parseDouble(jsonMap.get("Cur_OfficialRate"));
+        return (jsonMap.get("Cur_Scale") + " "
+                + jsonMap.get("Cur_Name") + " = "
+                + jsonMap.get("Cur_OfficialRate") + " Беларуских рублей "
+                + jsonMap.get("Date"));
     }
 }
