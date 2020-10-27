@@ -14,7 +14,6 @@ public class WorkWithCollections {
         Iterator iterator = collection.iterator();
         while (iterator.hasNext()) {
             Object o = iterator.next();
-            System.out.println(o);
         }
 
         long finish = System.currentTimeMillis();
@@ -26,7 +25,6 @@ public class WorkWithCollections {
         long start = System.currentTimeMillis();
 
         for (Object o : collection) {
-            System.out.println(o);
         }
 
         long finish = System.currentTimeMillis();
@@ -38,7 +36,7 @@ public class WorkWithCollections {
         long start = System.currentTimeMillis();
 
         for (Iterator iterator = collection.iterator(); iterator.hasNext(); ) {
-            System.out.println(iterator.next());
+
         }
 
         long finish = System.currentTimeMillis();
