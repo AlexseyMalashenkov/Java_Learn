@@ -1,8 +1,11 @@
 package homework_6;
 
+import annotation.Version;
 
+@Version(info = "Данный класс предназначен для хранения информации о пользователе")
 public class Person {
     private String nick;
+    @Version(info = "Поля для хранения пароля")
     private String password;
 
     public Person(String nick, String password) {
