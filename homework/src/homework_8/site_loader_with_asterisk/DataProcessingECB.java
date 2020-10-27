@@ -41,9 +41,6 @@ public class DataProcessingECB extends BankLoader {
         WorkWithJSON workWithJSON = new WorkWithJSON();
 
         Map<String, String> jsonMap = workWithJSON.parse(result);
-
-
-
         Map<String, String> ratesMap = workWithJSON.parse(jsonMap.get("rates"));
 
         return ratesMap.toString()  + " " + jsonMap.get("date");
