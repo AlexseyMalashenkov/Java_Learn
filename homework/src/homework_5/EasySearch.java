@@ -9,19 +9,4 @@ public class EasySearch implements ISearchEngine{
         }
         return count;
     }
-
-    public long findWordUpgrade(String textString, String word) {
-        int wordLength = 0;
-        long count = 0L;
-        int index = 0;
-
-        while(index != -1){
-            index = textString.indexOf(word, index + wordLength);
-            if (index != -1) {
-                count++;
-            }
-            wordLength = word.length();
-        }
-        return count;
-    }
 }

@@ -1,8 +1,5 @@
 package homework_5;
 
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class WarAndPeaceMain {

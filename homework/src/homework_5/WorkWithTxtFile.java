@@ -64,7 +64,5 @@ public class WorkWithTxtFile {
         } else {
             System.out.println("Вы ввели не правильное количество слов");
         }
-
-
     }
 }
