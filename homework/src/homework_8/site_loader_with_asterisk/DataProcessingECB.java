@@ -3,6 +3,9 @@ package homework_8.site_loader_with_asterisk;
 
 import homework_8.utils.WorkWithJSON;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class DataProcessingECB extends BankLoader {
@@ -41,6 +44,22 @@ public class DataProcessingECB extends BankLoader {
         WorkWithJSON workWithJSON = new WorkWithJSON();
 
         Map<String, String> jsonMap = workWithJSON.parse(result);
+
+        for (String name: jsonMap.keySet()){
+            String key = name;
+            String value = jsonMap.get(name);
+            if (value.length() > 100) {
+
+            }
+            System.out.println(key + " !!! " + value);
+        }
+        //2018-01-04
+        //2018-01-05
+        //2018-01-05
+        //end_at
+        //rates
+        //},"start_at
+        //2018-01-02
         Map<String, String> ratesMap = workWithJSON.parse(jsonMap.get("rates"));
 
         return ratesMap.toString()  + " " + jsonMap.get("date");
