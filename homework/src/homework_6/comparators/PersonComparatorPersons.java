@@ -1,4 +1,6 @@
-package homework_6;
+package homework_6.comparators;
+
+import homework_6.chiefs_classes.Person;
 
 import java.util.Comparator;
 

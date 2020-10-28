@@ -1,6 +1,6 @@
 package annotation;
 
-import homework_6.Person;
+import homework_6.chiefs_classes.Person;
 
 import java.lang.annotation.Annotation;
 

@@ -1,5 +1,8 @@
 package homework_6;
 
+import homework_6.chiefs_classes.Animal;
+import homework_6.comparators.AnimalComparatorAnimals;
+
 import java.util.TreeSet;
 
 public class CCPMain1 {

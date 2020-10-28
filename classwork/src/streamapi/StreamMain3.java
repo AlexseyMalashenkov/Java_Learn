@@ -1,7 +1,7 @@
 package streamapi;
 
 import collections.utils.AnyRandom;
-import homework_6.Person;
+import homework_6.chiefs_classes.Person;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package examples;
+package homework_7.Executors_Malashenkov.src.examples;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
