@@ -30,7 +30,7 @@ public class CCPMain2 {
         Set<Animal> animalsHashSet = new HashSet<>();
         Set<Animal> animalsTreeSet = new TreeSet(comparatorAnimals);
 
-        generator.generator(personLinkedList, generator::generatePersons, 1_000);
+        generator.generator(personLinkedList, generator::generatePersons, 2_000);
 
         new ExecutorServiceTask(personLinkedList, comparatorPersons);
 

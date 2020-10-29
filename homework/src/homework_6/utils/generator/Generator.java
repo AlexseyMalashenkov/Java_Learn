@@ -28,7 +28,7 @@ public class Generator {
 
         long finish = System.currentTimeMillis();
 
-        System.out.println(collection.getClass() + " время добавления используя простой цикл до 1_000_000: " + (finish - start));
+        System.out.println(collection.getClass() + " время добавления используя простой цикл: " + (finish - start));
     }
 
     public <T> void generator(Collection<T> container, Supplier<T> supplier, int count) {
@@ -40,7 +40,7 @@ public class Generator {
 
         long finish = System.currentTimeMillis();
 
-        System.out.println(container.getClass() + " время добавления используя простой цикл до 1_000_000: " + (finish - start));
+        System.out.println(container.getClass() + " время добавления используя простой цикл: " + (finish - start));
     }
 
     public Person generatePersons() {
