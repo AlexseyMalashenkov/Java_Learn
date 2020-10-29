@@ -30,12 +30,14 @@ public class CCPMain2 {
         Set<Animal> animalsHashSet = new HashSet<>();
         Set<Animal> animalsTreeSet = new TreeSet(comparatorAnimals);
 
-        generator.generator(personLinkedList, generator::generatePersons, 1_000_000);
+        generator.generator(personLinkedList, generator::generatePersons, 1_000);
+
+        new ExecutorServiceTask(personLinkedList, comparatorPersons);
+
         generator.generator(personArrayList, generator::generatePersons, 1_000_000);
         generator.generator(personHashSet, generator::generatePersons, 1_000_000);
         generator.generator(personTreeSet, generator::generatePersons, 1_000_000);
 
-        new ExecutorServiceTask(personLinkedList, comparatorPersons);
 
         generator.generator(animalsLinkedList, generator::generateAnimals, 1_000_000);
         generator.generator(animalsArrayList, generator::generateAnimals, 1_000_000);

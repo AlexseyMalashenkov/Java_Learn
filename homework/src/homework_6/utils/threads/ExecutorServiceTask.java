@@ -16,11 +16,10 @@ public class ExecutorServiceTask<T> {
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        System.out.println("Запуск потоков");
+        System.out.println("Запуск потока сортировки пузырьком");
 
         executor.execute(new BubbleSortThread<T>(list, comparator));
 
         executor.shutdown();
-        System.out.println("Завершение потоков");
     }
 }
