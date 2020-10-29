@@ -1,9 +1,5 @@
 package homework_8.without_asterisk;
 
-import homework_8.utils.WorkWithJSON;
-
-import java.util.Map;
-
 /**
  * Загрузчик курса с сайта Нац. Банка
  */
@@ -28,16 +24,7 @@ public class NBRBLoader extends SiteLoader{
     @Override
     protected double handle(String content, SiteLoader.Currency currencyName) {
         String strRate;
-        int currencyIndex = content.indexOf(rateKey);
-        double rate = 0;
 
-        try{
-            strRate = content.substring((currencyIndex + 18), (currencyIndex + 24));
-            rate += Double.parseDouble(strRate);
-        } catch (NullPointerException | NumberFormatException ex){
-            System.out.println(ex.getMessage());
-        }
-
-        return rate;
+        return 0;
     }
 }
