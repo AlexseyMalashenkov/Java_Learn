@@ -40,6 +40,7 @@ public class WorkWithFile {
             if (!file.exists() && !file.isDirectory()) {
                 saveToFolder = defaultFolder;
             }
+
         } catch(Exception e) {
             saveToFolder = defaultFolder;
         }
