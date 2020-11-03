@@ -22,12 +22,12 @@ public class Test {
                 .sorted(comparatorMarkAndName)
                 .collect(Collectors.toList());
 
-        writeToFiles.writeToTxt("", "out.txt", studentList);
-        writeToFiles.writeToBin("", "out.bin", studentList);
+        writeToFiles.writeToTxt("", "students.txt", studentList);
+        writeToFiles.writeToBin("", "students.bin", studentList);
 
         ReadFromFiles readFromFiles = new ReadFromFiles();
 
-        System.out.println(readFromFiles.readFromBin("homework/src/homework_9/out/", "out.bin"));
+        System.out.println(readFromFiles.readFromBin("homework/src/homework_9/out/", "students.bin"));
 
     }
 }

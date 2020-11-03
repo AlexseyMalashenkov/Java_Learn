@@ -27,6 +27,4 @@ public class ReadFromFiles {
 
         return studentList;
     }
-
-
 }
