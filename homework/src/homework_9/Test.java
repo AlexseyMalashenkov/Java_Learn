@@ -2,7 +2,7 @@ package homework_9;
 
 
 import homework_9.chief_class.Student;
-import homework_9.comparators.ComparatorByMarkFromHigh;
+import homework_9.comparators.ComparatorMarkAndName;
 import homework_9.utils.files.ReadFromFiles;
 import homework_9.utils.files.WriteToFiles;
 import homework_9.utils.generator.Generator;
@@ -13,13 +13,13 @@ import java.util.stream.Stream;
 
 public class Test {
     public static void main(String[] args) {
-        ComparatorByMarkFromHigh comparatorByMarkFromHigh = new ComparatorByMarkFromHigh();
+        ComparatorMarkAndName comparatorMarkAndName = new ComparatorMarkAndName();
         WriteToFiles writeToFiles = new WriteToFiles();
 
         List<Student> studentList = Stream
                 .generate(Generator::generateStudent)
                 .limit(10_000)
-                .sorted(comparatorByMarkFromHigh)
+                .sorted(comparatorMarkAndName)
                 .collect(Collectors.toList());
 
         writeToFiles.writeToTxt("", "out.txt", studentList);
