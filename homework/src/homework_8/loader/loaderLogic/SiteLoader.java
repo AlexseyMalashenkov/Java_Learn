@@ -76,8 +76,6 @@ public abstract class SiteLoader {
 
     public abstract FormatRate load(Currency currencyName, String date);
 
-    public abstract FormatRate load(Currency currencyName, String dateFrom, String dateTo);
-
     /**
      * Метод который будет дёрнут после успешной загрузки сайта
      * @param content содержимое сайта

@@ -2,9 +2,6 @@ package homework_8.loader.nbrb;
 
 import homework_8.loader.core.FormatRate;
 import homework_8.loader.loaderLogic.SiteLoader;
-import homework_8.utils.WorkWithJSON;
-
-import java.util.Map;
 
 /**
  * Загрузчик курса с сайта Нац. Банка
@@ -35,13 +32,6 @@ public class NBRBLoader extends SiteLoader {
         return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId() + "?ondate=" + date, currencyName);
     }
 
-    @Override
-    public FormatRate load(Currency currencyName, String dateFrom, String dateTo) {
-        return load("https://www.nbrb.by/api/exrates/rates/dynamics/" + currencyName.getId() +
-                                "?startDate=" + dateFrom + "&endDate=" + dateTo, currencyName);
-    }
-
-    //https://www.nbrb.by/api/exrates/rates/dynamics/145?startDate=2016-6-1&endDate=2016-6-30
     /**
      * Обработка результата загрузки с сайта банка
      * @param content то что получилось загрузить
