@@ -1,7 +1,7 @@
 package homework_8;
 
 
-import homework_8.loader.core.SiteLoader;
+import homework_8.loader.loaderLogic.SiteLoader;
 import homework_8.loader.nbrb.NBRBLoader;
 import homework_8.utils.WorkWithFile;
 
@@ -10,14 +10,7 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        //printRates(new NBRBLoader());
         logicStart();
-    }
-
-    public static void printRates(SiteLoader loader){
-        System.out.println(loader.load(SiteLoader.Currency.EUR));
-        System.out.println(loader.load(SiteLoader.Currency.RUB));
-        System.out.println(loader.load(SiteLoader.Currency.USD));
     }
 
     private static void logicStart() {
@@ -34,32 +27,8 @@ public class Test {
             path = "homework/src/homework_8/out/";
         }
 
-        System.out.println("Введите сокращение для валюты курс которой вы хотите узнать. Варианты:\n" +
-                            "       RUB\n" +
-                            "       EUR\n" +
-                            "       USD");
-
-        String currency = "";
-
-        try {
-            currency = scanner.nextLine();
-        } catch (NoSuchElementException | IllegalStateException e) {
-            System.err.println(e.getMessage() + " валюта = USD");
-            currency = "USD";
-        }
-
-        switch (currency) {
-            case "RUB":
-                workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.RUB));
-                break;
-            case "EUR":
-                workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.EUR));
-                break;
-            case "USD":
-                workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.USD));
-                break;
-            default:
-                System.out.println("Что-то пошло не так...");
-        }
+        workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.RUB, "2018-7-6"));
+        //workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.EUR, "2018-7-6"));
+        //workWithFile.saveToFile(path, loader.getFileName(), loader.load(SiteLoader.Currency.USD));
     }
 }

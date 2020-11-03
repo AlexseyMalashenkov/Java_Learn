@@ -1,17 +1,19 @@
 package homework_8.utils;
 
+import homework_8.loader.core.FormatRate;
+
 import java.io.File;
 import java.io.FileWriter;
 
 public class WorkWithFile {
 
-    public void saveToFile(String filePath, String fileName, String strForWriteFoFile) {
+    public void saveToFile(String filePath, String fileName, FormatRate formatRate) {
         File file = new File(checkPath(filePath) + fileName);
 
         try {
             FileWriter writer = new FileWriter(file, false);
 
-            writer.write(strForWriteFoFile);
+            writer.write(formatRate.toString());
             writer.close();
         } catch (java.io.IOException e) {
             System.out.println(e.getMessage());

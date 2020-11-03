@@ -1,4 +1,6 @@
-package homework_8.loader.core;
+package homework_8.loader.loaderLogic;
+
+import homework_8.loader.core.FormatRate;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -32,7 +34,7 @@ public abstract class SiteLoader {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected final String load(String urlToSite, SiteLoader.Currency currencyName){
+    protected final FormatRate load(String urlToSite, SiteLoader.Currency currencyName){
 
         StringBuilder content;
         boolean error;
@@ -70,7 +72,11 @@ public abstract class SiteLoader {
         return handle(content.toString(), currencyName);
     }
 
-    public abstract String load(Currency currencyName);
+    public abstract FormatRate load(Currency currencyName);
+
+    public abstract FormatRate load(Currency currencyName, String date);
+
+    public abstract FormatRate load(Currency currencyName, String dateFrom, String dateTo);
 
     /**
      * Метод который будет дёрнут после успешной загрузки сайта
@@ -78,5 +84,5 @@ public abstract class SiteLoader {
      * @param currencyName валюта которую мы ищем
      * @return курс который мы нашли
      */
-    protected abstract String handle(String content, SiteLoader.Currency currencyName);
+    protected abstract FormatRate handle(String content, Currency currencyName);
 }
