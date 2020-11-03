@@ -5,9 +5,9 @@ import solid.service.notificator.EmailNotificator;
 import solid.service.notificator.ViberNotificator;
 
 public enum TypeNotification implements INotificator{
-    EMAIL(new EmailNotificator()),
-    VIBER(new ViberNotificator()),
-    CONSOLE(new ConsoleNotificator());
+    EMAIL(EmailNotificator.getInstance()),
+    VIBER(ViberNotificator.getInstance()),
+    CONSOLE(ConsoleNotificator.getInstance());
 
     private final INotificator notificator;
 
