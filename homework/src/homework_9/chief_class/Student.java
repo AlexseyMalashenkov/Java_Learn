@@ -53,9 +53,6 @@ public class Student implements Serializable {
 
     @Override
     public String toString() {
-        return "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", mark=" + mark;
+        return "ФИО: " + getFullName() + " оценка: " + getMark();
     }
 }
