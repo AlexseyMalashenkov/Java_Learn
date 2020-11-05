@@ -2,6 +2,7 @@ package homework_8.loader.belapb;
 
 import homework_8.loader.core.FormatRate;
 import homework_8.loader.loaderLogic.SiteLoader;
+import homework_8.utils.WorkWithXML;
 
 public class ABPLoader extends SiteLoader {
     private final String strForRate = "Cur_OfficialRate";
@@ -31,8 +32,9 @@ public class ABPLoader extends SiteLoader {
 
     @Override
     protected FormatRate handle(String content, Currency currencyName) {
+        WorkWithXML workWithXML = new WorkWithXML();
 
-
+        workWithXML.parseXML("https://belapb.by/ExCardsDaily.php?ondate=11/5/2020");
 
         return new FormatRate("", "", "");
     }
