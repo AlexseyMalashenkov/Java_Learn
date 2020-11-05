@@ -52,9 +52,6 @@ public class ABPLoader extends SiteLoader {
             XPath xpath = xpf.newXPath();
             XPathExpression expression = xpath.compile("//DailyExCards");
 
-            Node b13Node = (Node) expression.evaluate(document, XPathConstants.NODE);
-            b13Node.getParentNode().removeChild(b13Node);
-
             TransformerFactory tf = TransformerFactory.newInstance();
             Transformer t = tf.newTransformer();
             t.transform(new DOMSource(document), new StreamResult(System.out));
