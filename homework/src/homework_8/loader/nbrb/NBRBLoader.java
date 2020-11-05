@@ -24,12 +24,18 @@ public class NBRBLoader extends SiteLoader {
      */
     @Override
     public FormatRate load(Currency currencyName) {
-        return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId(), currencyName);
+        return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getIdNBRB(), currencyName);
     }
 
     @Override
     public FormatRate load(Currency currencyName, String date) {
-        return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getId() + "?ondate=" + date, currencyName);
+        return load("https://www.nbrb.by/api/exrates/rates/" + currencyName.getIdNBRB() + "?ondate=" + date, currencyName);
+    }
+
+    @Override
+    public FormatRate load(Currency currencyName, String dateFrom, String dateTo) {
+        return load("https://www.nbrb.by/api/exrates/rates/dynamics/" + currencyName.getIdNBRB() +
+                "?startDate=" + dateFrom + "&endDate=" + dateTo, currencyName);
     }
 
     /**
@@ -48,7 +54,7 @@ public class NBRBLoader extends SiteLoader {
 
         String scale = "";
 
-        if (currencyName.getId().equals(Currency.RUB.getId())) {
+        if (currencyName.getIdNBRB().equals(Currency.RUB.getIdNBRB())) {
             scale = content.substring(indexScale + 11, indexScale + 14);
         } else {
             scale = content.substring(indexScale + 11, indexScale + 12);

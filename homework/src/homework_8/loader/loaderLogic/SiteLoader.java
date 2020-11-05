@@ -13,18 +13,24 @@ import java.net.URL;
 public abstract class SiteLoader {
 
     public enum Currency{
-        USD("145"),
-        EUR("292"),
-        RUB("298");
+        USD("145", "840"),
+        EUR("292", "978"),
+        RUB("298", "643");
 
-        private String id;
+        private String idNBRB;
+        private String idAPB;
 
-        Currency(String id) {
-            this.id = id;
+        Currency(String idNBRB, String idAPB) {
+            this.idNBRB = idNBRB;
+            this.idAPB = idAPB;
         }
 
-        public String getId(){
-            return this.id;
+        public String getIdNBRB() {
+            return idNBRB;
+        }
+
+        public String getIdAPB() {
+            return idAPB;
         }
     }
 
@@ -75,6 +81,8 @@ public abstract class SiteLoader {
     public abstract FormatRate load(Currency currencyName);
 
     public abstract FormatRate load(Currency currencyName, String date);
+
+    public abstract FormatRate load(Currency currencyName, String dateFrom, String dateTo);
 
     /**
      * Метод который будет дёрнут после успешной загрузки сайта
